@@ -1,0 +1,89 @@
+﻿@model Embrace.Models.ResourceViewModel
+
+@{
+    ViewData["Title"] = "Resource List";
+}
+<link rel="stylesheet" href="/css/resources.css" />
+<h1>Resource List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form asp-controller="Resources" asp-action="Index" method="get">
+    <p>
+        <select asp-for="SelectedResourceType" asp-items="Model.ResourceTypes">
+            <option value="" selected disabled>Select a resource type</option>
+            <option value="">All</option>
+        </select>
+        <select asp-for="ServiceCategoryId" asp-items="Model.ServiceCategories">
+            <option value="" selected disabled>Select a service category</option>
+            <option value="">All</option>
+        </select>
+        <label><input type="text" name="SearchString" placeholder="Enter a searchword" /></label>
+        <input type="submit" value="Enter" />
+    </p>
+</form>
+<div style="overflow-x:auto;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                </th>
+                <th>
+                    <p>Resource Name<p/>
+                </th>
+                <th>
+                    <p>Type</p>
+                </th>
+                <th>
+                    <p>Service Categories</p>
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Resources!)
+            {
+                <tr>
+                    <td>
+                        <div class="resource-image">
+                            @if (!string.IsNullOrEmpty(item.LocationImage))
+                            {
+                                <img src="@item.LocationImage" alt="Location Image" />
+                            }
+                            else if (!string.IsNullOrEmpty(item.LogoImage))
+                            {
+                                <img src="@item.LogoImage" alt="Logo Image" />
+                            }
+                            else
+                            {
+                                <img src="/images/resourcePlaceholderImage.jpg" alt="No Resource Image Available" />
+                            }
+                        </div>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ResourceName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ResourceType)
+                    </td>
+                    <td>
+                        <ul class="service-categories">
+                            @foreach (var category in item.ServiceCategories)
+                            {
+                                <li class="checkmark-bullet">
+                                    @category.ServiceCategory.Name
+                                </li>
+                            }
+                        </ul>
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

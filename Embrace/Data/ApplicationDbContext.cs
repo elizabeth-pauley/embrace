@@ -1,0 +1,37 @@
+﻿using Embrace.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
+
+namespace Embrace.Data
+{
+    public class ApplicationDbContext: DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {
+
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            // Configure the many-to-many relationship
+            builder.Entity<ResourceServiceCategories>()
+                .HasKey(rsc => new { rsc.ResourceId, rsc.ServiceCategoryId });
+
+            builder.Entity<ResourceServiceCategories>()
+                .HasOne(rsc => rsc.Resource)
+                .WithMany(r => r.ServiceCategories)
+                .HasForeignKey(rsc => rsc.ResourceId);
+
+            builder.Entity<ResourceServiceCategories>()
+                .HasOne(rsc => rsc.ServiceCategory)
+                .WithMany(sc => sc.Resources)
+                .HasForeignKey(rsc => rsc.ServiceCategoryId);
+        }
+
+        public DbSet<Resource> Resource { get; set; }
+        public DbSet<ServiceCategory> ServiceCategories { get; set; }
+        public DbSet<ResourceServiceCategories> ResourceServiceCategories { get; set; }
+    }
+}
