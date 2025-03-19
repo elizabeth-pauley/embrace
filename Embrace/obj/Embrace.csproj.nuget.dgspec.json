@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EP\\source\\repos\\Embrace\\Embrace\\Embrace.csproj": {}
+    "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Embrace.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EP\\source\\repos\\Embrace\\Embrace\\Embrace.csproj": {
+    "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Embrace.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EP\\source\\repos\\Embrace\\Embrace\\Embrace.csproj",
+        "projectUniqueName": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Embrace.csproj",
         "projectName": "Embrace",
-        "projectPath": "C:\\Users\\EP\\source\\repos\\Embrace\\Embrace\\Embrace.csproj",
+        "projectPath": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Embrace.csproj",
         "packagesPath": "C:\\Users\\EP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EP\\source\\repos\\Embrace\\Embrace\\obj\\",
+        "outputPath": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

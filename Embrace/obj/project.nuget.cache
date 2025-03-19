@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xMDaY8zP1qg=",
+  "dgSpecHash": "TNN7BY5XerQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\EP\\source\\repos\\Embrace\\Embrace\\Embrace.csproj",
+  "projectFilePath": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Embrace.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EP\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\EP\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
