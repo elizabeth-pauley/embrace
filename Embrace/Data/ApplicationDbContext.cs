@@ -1,10 +1,12 @@
 ﻿using Embrace.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
 
 namespace Embrace.Data
 {
-    public class ApplicationDbContext: DbContext
+    public class ApplicationDbContext: IdentityDbContext<User>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -23,15 +25,20 @@ namespace Embrace.Data
                 .HasOne(rsc => rsc.Resource)
                 .WithMany(r => r.ServiceCategories)
                 .HasForeignKey(rsc => rsc.ResourceId);
-
+            
             builder.Entity<ResourceServiceCategories>()
                 .HasOne(rsc => rsc.ServiceCategory)
                 .WithMany(sc => sc.Resources)
                 .HasForeignKey(rsc => rsc.ServiceCategoryId);
+
+            builder.Entity<IdentityRole>().HasData(new IdentityRole() { Id = "1", Name = "Administrator" });
+            builder.Entity<IdentityRole>().HasData(new IdentityRole() { Id = "2", Name = "User" });
         }
 
-        public DbSet<Resource> Resource { get; set; }
+
+        public DbSet<Resource> Resources { get; set; }
         public DbSet<ServiceCategory> ServiceCategories { get; set; }
         public DbSet<ResourceServiceCategories> ResourceServiceCategories { get; set; }
+        public DbSet<Document> Documents { get; set; }
     }
 }

@@ -24,7 +24,7 @@ namespace Embrace.Controllers
         // GET: Resources
         public async Task<IActionResult> Index(ResourceType? resourceType, int? serviceCategoryId, string? searchString)
         {
-            var resourcesQuery = _context.Resource
+            var resourcesQuery = _context.Resources
                                           .Include(r => r.ServiceCategories)
                                           .ThenInclude(rc => rc.ServiceCategory)                    
                                           .AsQueryable();
@@ -51,7 +51,7 @@ namespace Embrace.Controllers
             var resources = await resourcesQuery.ToListAsync();
 
             // Use LINQ to get list of resource types + tags
-            IQueryable<ResourceType> resourceTypeQuery = from r in _context.Resource
+            IQueryable<ResourceType> resourceTypeQuery = from r in _context.Resources
                                                          orderby r.ResourceType
                                                          select r.ResourceType;
 
@@ -77,7 +77,7 @@ namespace Embrace.Controllers
                 return NotFound();
             }
 
-            var resource = await _context.Resource
+            var resource = await _context.Resources
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (resource == null)
             {
@@ -116,7 +116,7 @@ namespace Embrace.Controllers
                     });
                 }
             }
-            _context.Resource.Add(resource);
+            _context.Resources.Add(resource);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
@@ -129,7 +129,7 @@ namespace Embrace.Controllers
                 return NotFound();
             }
 
-            var resource = await _context.Resource.FindAsync(id);
+            var resource = await _context.Resources.FindAsync(id);
             if (resource == null)
             {
                 return NotFound();
@@ -145,7 +145,7 @@ namespace Embrace.Controllers
                 return NotFound();
             }
 
-            var resource = await _context.Resource
+            var resource = await _context.Resources
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (resource == null)
             {
@@ -160,10 +160,10 @@ namespace Embrace.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var resource = await _context.Resource.FindAsync(id);
+            var resource = await _context.Resources.FindAsync(id);
             if (resource != null)
             {
-                _context.Resource.Remove(resource);
+                _context.Resources.Remove(resource);
             }
 
             await _context.SaveChangesAsync();
@@ -172,7 +172,7 @@ namespace Embrace.Controllers
 
         private bool ResourceExists(int id)
         {
-            return _context.Resource.Any(e => e.Id == id);
+            return _context.Resources.Any(e => e.Id == id);
         }
 
         /*private async Task CreateTestData()

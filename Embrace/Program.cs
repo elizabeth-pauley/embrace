@@ -1,6 +1,10 @@
 using Embrace.Data;
+using Embrace.Models;
+using Embrace.Services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
@@ -12,6 +16,16 @@ builder.Services.AddScoped<ApplicationDbContext>();
 // MySQL DB connection
 string _GetConnStringName = builder.Configuration.GetConnectionString("DefaultConnectionMySQL")!;
 builder.Services.AddDbContextPool<ApplicationDbContext>(options => options.UseMySql(_GetConnStringName, ServerVersion.AutoDetect(_GetConnStringName)));
+
+// Register IEmailSender Service
+builder.Services.AddSingleton<IEmailSender, MockEmailSender>();
+
+builder.Services.AddIdentity<User, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultUI();
+
+builder.Services.AddAuthorization();
+builder.Services.AddAuthentication();
 
 var app = builder.Build();
 
@@ -32,6 +46,16 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.MapIdentityApi<User>();
+
+// Add protected endpoint for API; require auth before accessing endpoint
+app.MapGet("Users/Profile", async (ClaimsPrincipal claims, ApplicationDbContext context) =>
+{
+    string userId = claims.Claims.First(claims => claims.Type == ClaimTypes.NameIdentifier).Value;
+    return await context.UserClaims.FindAsync(userId);
+})
+.RequireAuthorization();
+
 app.UseStaticFiles();
 
 app.UseRouting();

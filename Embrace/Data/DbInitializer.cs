@@ -34,7 +34,7 @@ namespace Embrace.Data
             }
 
             // Seed Resources after ServiceCategories are seeded
-            if (!context.Resource.Any())
+            if (!context.Resources.Any())
             {
                 await CreateTestResources(context);
             }
@@ -66,7 +66,7 @@ namespace Embrace.Data
                     }
                 };
 
-            context.Resource.AddRange(resources);
+            context.Resources.AddRange(resources);
             await context.SaveChangesAsync(); // Save resources to generate IDs
 
             var resourceServiceCategories = new List<ResourceServiceCategories>
