@@ -61,7 +61,7 @@ namespace Embrace.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Documents");
+                    b.ToTable("Documents", (string)null);
                 });
 
             modelBuilder.Entity("Embrace.Models.Resource", b =>
@@ -103,7 +103,7 @@ namespace Embrace.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Resources");
+                    b.ToTable("Resources", (string)null);
                 });
 
             modelBuilder.Entity("Embrace.Models.ResourceServiceCategories", b =>
@@ -118,7 +118,7 @@ namespace Embrace.Migrations
 
                     b.HasIndex("ServiceCategoryId");
 
-                    b.ToTable("ResourceServiceCategories");
+                    b.ToTable("ResourceServiceCategories", (string)null);
                 });
 
             modelBuilder.Entity("Embrace.Models.ServiceCategory", b =>
@@ -135,7 +135,7 @@ namespace Embrace.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ServiceCategories");
+                    b.ToTable("ServiceCategories", (string)null);
                 });
 
             modelBuilder.Entity("Embrace.Models.User", b =>

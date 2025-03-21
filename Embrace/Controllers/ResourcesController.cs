@@ -174,37 +174,5 @@ namespace Embrace.Controllers
         {
             return _context.Resources.Any(e => e.Id == id);
         }
-
-        /*private async Task CreateTestData()
-        {
-            foreach (var item in GetResourceList())
-            {
-                _context.Resource.Add(item);
-                await _context.SaveChangesAsync();
-            }
-        }
-
-        private IEnumerable<Resource> GetResourceList()
-        {
-            return new List<Resource>
-            {
-                new Resource { ResourceType = ResourceType.Local, ResourceName = "Bienvenidos", Description = "\"Bienvenidos illuminates pathways to self empowerment and belonging for the Spanish-speaking community by building bridges to resources, relationships, and advocates\"", LogoImage = "https://bienvenidosgv.org/hs-fs/hubfs/Untitled%2Bdesign.png?width=450&height=180&name=Untitled%2Bdesign.png", WebsiteUrl = "https://bienvenidosgv.org/"},
-                new Resource { ResourceType = ResourceType.General, ResourceName = "Immigrant Legal Resource Center", Description = "\"Working with and educating immigrants, community organizations, and the legal sector to help build a democratic society that values diversity and the rights of all people\"", WebsiteUrl = "https://www.ilrc.org/", LogoImage = "https://i.pinimg.com/originals/b4/44/fa/b444fa5d1d9c1ad1442078458c3cec45.png"},
-                new Resource { ResourceType = ResourceType.Local, ResourceName = "Resource #3", Description = "Description of resource #3.", WebsiteUrl = "https://www.google.com/"},
-                new Resource { ResourceType = ResourceType.Local, ResourceName = "Resource #4", Description = "Description of resource #4.", WebsiteUrl = "https://www.google.com/"},
-                new Resource { ResourceType = ResourceType.General, ResourceName = "Resource #5", Description = "Description of resource #5.", WebsiteUrl = "https://www.google.com/"}
-            };
-        }*/
-
-        /*private async Task CreateTestData()
-        {
-
-        }
-
-        private async Task<IEnumerable<Resource>> GetResourceList()
-        {
-            return;
-        }*/
-
     }
 }
