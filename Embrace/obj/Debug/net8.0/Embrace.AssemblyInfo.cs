@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Embrace")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13846a7ffe1450fadab2038f7b72fc5f3c7aecd6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0f57b15a465e0966d550b94d6ffffc75e01a189")]
 [assembly: System.Reflection.AssemblyProductAttribute("Embrace")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Embrace")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

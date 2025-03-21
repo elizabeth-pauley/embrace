@@ -32,8 +32,7 @@ body {
     font-size: 1em;
 }
 
-.navbar-nav {
-    justify-content: right;
+.navbar-nav, .btn {
     font-size: 1em;
 }
 
@@ -64,6 +63,10 @@ body {
     height: 100%;
 }
 
+.col-md-4 {
+    padding-bottom: 1em;
+}
+
 .card-body {
     flex-grow: 1;
     display: flex;
@@ -73,9 +76,11 @@ body {
     text-align: left;
 }
 
-.card {
+.card, .card:hover {
     background-color: #FFFFFF;
     box-shadow: rgba(0,0,0,0,4);
+    text-decoration: none;
+    color: #000000;
 }
 
 .card-img {

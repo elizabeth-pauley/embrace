@@ -5,7 +5,7 @@
 <!-- Welcome Section -->
 <section class="container text-center my-5">
     <div class="row align-items-center">
-        <!-- Left: Welcome Text -->
+        <!-- Welcome Text -->
         <div class="col-md-6 text-md-start">
             <h1>Welcome!</h1>
             <p class="lead">
@@ -14,7 +14,7 @@
             </p>
         </div>
 
-        <!-- Right: Logo Image -->
+        <!-- Logo Image -->
         <div class="col-md-6 text-center">
             <img src="/images/embraceLogo.png" class="img-fluid logo-large" alt="Logo Image">
         </div>
@@ -22,36 +22,36 @@
 </section>
 
 
-<!-- Services Offered Tiles Section -->
+<!-- Tile Section for Services Offered -->
 <section class="container my-5">
     <h2 class="section-title">What We Offer</h2>
     <div class="row">
         <div class="col-md-4">
-            <div class="card shadow-sm">
+            <a class="card shadow-sm" asp-area="" asp-controller="Resources" asp-action="Index">
                 <img src="/images/resourcesLogo.jpg" class="card-img rounded" alt="Resource Hub">
                 <div class="card-body">
                     <h5 class="card-title">Resource Hub</h5>
                     <p class="card-text">A collection of location-based and general resources that can assist you in a variety of categories such as legal assistance, immigration support, housing, financial aid, healthcare, and more.</p>
                 </div>
-            </div>
+            </a>
         </div>
         <div class="col-md-4">
-            <div class="card shadow-sm">
+            <a class="card shadow-sm" asp-area="" asp-controller="Documents" asp-action="Index">
                 <img src="/images/documentTranslationLogo.jpg" class="card-img rounded" alt="Document Translation">
                 <div class="card-body">
                     <h5 class="card-title">Document Translation</h5>
                     <p class="card-text">A free service that allows you to safely upload PDFs or images and receive a translated version in your preferred language.</p>
                 </div>
-            </div>
+            </a>
         </div>
         <div class="col-md-4">
-            <div class="card shadow-sm">
+            <a class="card shadow-sm" asp-area="" asp-controller="DiscussionBoards" asp-action="Index">
                 <img src="/images/connectionCornerLogo.jpg" class="card-img rounded" alt="Connection Corner">
                 <div class="card-body">
                     <h5 class="card-title">Connection Corner</h5>
                     <p class="card-text">A page where you can find people to meet up with in your community, ask questions, or simply start a conversation!</p>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </section>
