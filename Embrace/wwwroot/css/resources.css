@@ -24,3 +24,38 @@
     background-repeat: no-repeat;
     background-position: left center;
 }
+
+.search-container {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.form-select, .form-control {
+    font-size: inherit;
+}
+
+/* table styling */
+.table {
+    border-spacing: 0px 10px;
+    border-collapse: separate;
+}
+
+.table td, .table th {
+    padding: 1em;
+    align-content: center;
+}
+
+.table th h4 {
+    color: white;
+}
+
+.table .resource-header {
+    background-color: #004080;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+}
+
+.resource-row {
+    background-color: #ffffff;
+    border-radius: 50px;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+}

@@ -1,42 +1,55 @@
-﻿@model Embrace.Models.ResourceViewModel
+﻿@using Microsoft.AspNetCore.Identity
+@model Embrace.Models.ResourceViewModel
+@inject SignInManager<User> SignInManager
+
 
 @{
     ViewData["Title"] = "Resource List";
 }
-<link rel="stylesheet" href="/css/resources.css" />
-<h1>Resource List</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<form asp-controller="Resources" asp-action="Index" method="get">
+<link rel="stylesheet" href="/css/resources.css" />
+
+<h1>Resources</h1>
+
+@if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+{
     <p>
-        <select asp-for="ResourceType" asp-items="Model.ResourceTypes">
+        <a class="btn btn-create" asp-action="Create">Add a resource</a>
+    </p>
+}
+
+<form asp-controller="Resources" asp-action="Index" method="get" class="search-container">
+    <div class="d-flex">
+        <select asp-for="ResourceType" asp-items="Model.ResourceTypes" class="form-select me-2">
             <option value="" selected disabled>Select a resource type</option>
             <option value="">All</option>
         </select>
-        <select asp-for="ServiceCategoryId" asp-items="Model.ServiceCategories">
+
+        <select asp-for="ServiceCategoryId" asp-items="Model.ServiceCategories" class="form-select me-2">
             <option value="" selected disabled>Select a service category</option>
             <option value="">All</option>
         </select>
-        <label><input type="text" name="SearchString" placeholder="Enter a searchword" /></label>
-        <input type="submit" value="Enter" />
-    </p>
+
+        <input type="text" name="SearchString" placeholder="Enter a searchword" class="form-control me-2" />
+
+        <button type="submit" class="btn btn-search">Search</button>
+    </div>
 </form>
+
 <div style="overflow-x:auto;">
-    <table class="table">
-        <thead>
+    <table class="table table-borderless table-sm">
+        <thead class="resource-header">
             <tr>
                 <th>
                 </th>
                 <th>
-                    <p>Resource Name<p/>
+                    <h4>Resource Name</h4>
                 </th>
                 <th>
-                    <p>Type</p>
+                    <h4>Type</h4>
                 </th>
                 <th>
-                    <p>Service Categories</p>
+                    <h4>Service Categories</h4>
                 </th>
                 <th></th>
             </tr>
@@ -44,7 +57,7 @@
         <tbody>
             @foreach (var item in Model.Resources!)
             {
-                <tr>
+                <tr class="resource-row">
                     <td>
                         <div class="resource-image">
                             @if (!string.IsNullOrEmpty(item.LocationImage))
@@ -78,9 +91,15 @@
                         </ul>
                     </td>
                     <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-details resource-button asp-action="Details" asp-route-id="@item.Id">Details</a>
+
+                            @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                            {
+                                <a class="btn btn-success resource-button" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-delete resource-button" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            }
+                        </div>
                     </td>
                 </tr>
             }

@@ -3,14 +3,65 @@ html {
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 14px;
+    }
 }
 
+/* button styling */
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
+
+.btn {
+    color: white;
+}
+
+.btn-create {
+    background-color: #9656a2;
+}
+
+.btn-create:hover {
+    background-color: #81488c;
+    color: white;
+}
+
+.btn-search {
+    background-color: #17a2b8;
+}
+
+.btn-search:hover {
+    background-color: #13919d;
+    color: white;
+}
+
+.btn-details {
+    background-color: #dec000;
+}
+
+.btn-details:hover {
+    background-color: #c4a700;
+    color: white;
+}
+
+.btn-download {
+    background-color: #369acc;
+}
+
+.btn-download:hover {
+    background-color: #2a7ba8;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #de324c;
+}
+
+.btn-delete:hover {
+    background-color: #c42a42;
+    color: white;
+}
+/* end button styling */
 
 html {
   position: relative;
@@ -20,8 +71,17 @@ html {
 body {
     margin-bottom: 60px;
     background-color: #E1F2F7;
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Lato', serif;
     font-size: 1.4em;
+}
+
+.lead {
+    font-weight: 350;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    font-family: 'Lustria', serif;
 }
 
 .navbar {
@@ -29,18 +89,18 @@ body {
 }
 
 .navbar-brand {
+    font-family: 'Lustria', serif;
     font-size: 1em;
 }
 
 .navbar-nav, .btn {
+    font-family: 'Lustria', serif;
     font-size: 1em;
 }
 
 .nav-item {
     padding-right: .8em;
 }
-
-/* styling */
 
 .welcome-text {
     max-width: 600px;
@@ -91,6 +151,11 @@ body {
     margin: auto;
 }
 
+.card-img-doc {
+    height: 210px;
+    padding-top: 10px;
+}
+
 .card-title {
     font-weight: bold;
     font-size: 1em;
@@ -98,4 +163,5 @@ body {
 
 .card-text {
     font-size: .9em;
+    font-weight: 350;
 }

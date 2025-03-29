@@ -11,6 +11,7 @@ namespace Embrace.Models
         public string OriginalDataPath { get; set; }
         public string TranslatedDataPath { get; set; }
         public string TargetLanguage { get; set; }
+        //public byte[] DocumentData { get; set;  }
         [DataType(DataType.Date)]
         public DateTime CreatedOn { get; set; }
 

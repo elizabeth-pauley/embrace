@@ -1,71 +1,57 @@
 ﻿@model IEnumerable<Embrace.Models.Document>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Document Translation";
 }
 
-<h1>Index</h1>
+<h1>My Documents</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-create" asp-action="Create">Upload a New Document</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OriginalLanguage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OriginalDataPath)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TranslatedDataPath)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TargetLanguage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedOn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OriginalLanguage)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OriginalDataPath)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TranslatedDataPath)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TargetLanguage)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedOn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.Id)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+
+<section class="container my-5">
+    <div class="row">
+        @for (int i = 1; i <=3; i++)
+        {
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="@("/images/documentIcon" + i + ".png")" class="card-img-doc" alt="Document Icon">
+                    <div class="card-body">
+                        <h5 class="card-title">Document @i</h5>
+                        <p class="card-text">Uploaded on: 3/28/2025</p>
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-details" asp-action="Details" asp-route-id="">Details</a>
+                            <a class="btn btn-download" asp-action="Download" asp-route-id="">Download</a>
+                            <a class="btn btn-delete" asp-action="Delete" asp-route-id="">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<!--
+<section class="container my-5">
+    <div class="row">
+@foreach (var item in Model)
+{
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                            <img src="/images/documentIcon1.png" class="card-img-top" alt="Document Icon">
+                            <div class="card-body">
+                                <h5 class="card-title">@item.Title</h5>
+                                <p class="card-text">Uploaded on: @item.CreatedOn.ToShortDateString()</p>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-primary" asp-action="Details" asp-route-id=@item.Id>Details</a>
+                                    <a class="btn btn-success" asp-action="Download" asp-route-id=@item.Id>Download</a>
+                                    <a class="btn btn-danger" asp-action="Delete" asp-route-id=@item.Id>Delete</a>
+                                </div>
+                            </div>
+                </div>
+            </div>
 }
-    </tbody>
-</table>
+    </div>
+</section>
+-->

@@ -25,6 +25,18 @@
       "PackagePath": "staticwebassets\\images\\connectionCornerLogo.jpg"
     },
     {
+      "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\documentIcon1.png",
+      "PackagePath": "staticwebassets\\images\\documentIcon1.png"
+    },
+    {
+      "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\documentIcon2.png",
+      "PackagePath": "staticwebassets\\images\\documentIcon2.png"
+    },
+    {
+      "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\documentIcon3.png",
+      "PackagePath": "staticwebassets\\images\\documentIcon3.png"
+    },
+    {
       "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\documentTranslationLogo.jpg",
       "PackagePath": "staticwebassets\\images\\documentTranslationLogo.jpg"
     },
