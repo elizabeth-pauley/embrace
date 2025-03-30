@@ -4,34 +4,48 @@
     ViewData["Title"] = "Document Translation";
 }
 
+<link rel="stylesheet" href="/css/documents.css" />
+
 <h1>My Documents</h1>
 
-<p>
-    <a class="btn btn-create" asp-action="Create">Upload a New Document</a>
-</p>
-
-<section class="container my-5">
-    <div class="row">
-        @for (int i = 1; i <=3; i++)
-        {
-            <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <img src="@("/images/documentIcon" + i + ".png")" class="card-img-doc" alt="Document Icon">
-                    <div class="card-body">
-                        <h5 class="card-title">Document @i</h5>
-                        <p class="card-text">Uploaded on: 3/28/2025</p>
-                        <div class="d-flex justify-content-between">
-                            <a class="btn btn-details" asp-action="Details" asp-route-id="">Details</a>
-                            <a class="btn btn-download" asp-action="Download" asp-route-id="">Download</a>
-                            <a class="btn btn-delete" asp-action="Delete" asp-route-id="">Delete</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        }
+<div class="row">
+    <div class="col-md-6 doc-upload-left">
+        <p class="doc-upload-description">
+            Having a hard time translating something? Upload your document here, select your preferred language, and receive a translated version back!
+        </p>
+        <a class="btn btn-create" asp-action="Create">Upload a New Document</a>
     </div>
-</section>
 
+    <div style="overflow-x:auto;" class="col-md-6">
+        <table class="table table-borderless table-sm">
+            <tbody>
+                @for (int i = 1; i <= 2; i++)
+                {
+                    <tr class="document-row">
+                        <td>
+                            <div class="document-image">
+                                <img src="/images/documentIcon.png" class="card-img-doc" alt="Document Icon">
+                            </div>
+                        </td>
+                        <td>
+                            Document @i
+                        </td>
+                        <td>
+                            Uploaded On: 3/30/2025
+                        </td>
+                        <td>
+                            <div class="d-flex flex-column justify-content-between gap-2">
+                                <a class="btn btn-details document-button" asp-action="Details" asp-route-id="">Details</a>
+                                    <a class="btn btn-download document-button" asp-action="Download" asp-route-id="">Download</a>
+                                    <a class="btn btn-delete document-button" asp-action="Delete" asp-route-id="">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
 <!--
 <section class="container my-5">
     <div class="row">

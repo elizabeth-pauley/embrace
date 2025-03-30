@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/VgZJ6rE+VOuORB1hqVB3fyoTjwpsZECgEGUwF738Ic=",
+  "Hash": "Y9wY0690qOIV+2utbi0PCDHlGhAFLHu3HB4jniZf628=",
   "Source": "Embrace",
   "BasePath": "_content/Embrace",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Embrace.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\css\\documents.css",
+      "SourceId": "Embrace",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\",
+      "BasePath": "_content/Embrace",
+      "RelativePath": "css/documents.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\documents.css"
     },
     {
       "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\css\\resources.css",

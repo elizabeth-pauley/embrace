@@ -1,10 +1,10 @@
 html {
-  font-size: 14px;
+  font-size: 1em;
 }
 
 @media (min-width: 768px) {
     html {
-        font-size: 14px;
+        font-size: 1em;
     }
 }
 
@@ -72,11 +72,15 @@ body {
     margin-bottom: 60px;
     background-color: #E1F2F7;
     font-family: 'Lato', serif;
-    font-size: 1.4em;
+    font-size: 1.3em;
 }
 
 .lead {
-    font-weight: 350;
+    font-weight: normal;
+}
+
+h1 {
+    padding-top: .5em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -141,6 +145,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: rgba(0,0,0,0,4);
     text-decoration: none;
     color: #000000;
+    border-radius: 8px;
 }
 
 .card-img {
@@ -162,6 +167,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-text {
-    font-size: .9em;
-    font-weight: 350;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+/* table styling */
+.table {
+    border-spacing: 0px 10px;
+    border-collapse: separate;
+}
+
+.table td, .table th {
+    padding: 1em;
+    align-content: center;
+}
+
+.table th h4 {
+    color: white;
+}
+
+.table .resource-header {
+    background-color: #004080;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+}
+
+.resource-row, .document-row {
+    background-color: #ffffff;
+    border-radius: 50px;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
 }

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Embrace.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\css\\documents.css",
+      "PackagePath": "staticwebassets\\css\\documents.css"
+    },
+    {
       "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\css\\resources.css",
       "PackagePath": "staticwebassets\\css\\resources.css"
     },

@@ -31,6 +31,7 @@
         </select>
 
         <input type="text" name="SearchString" placeholder="Enter a searchword" class="form-control me-2" />
+        <input type="text" name="ZipSearchString" placeholder="Enter a zipcode" class="form-control me-2" /> <!-- TO-DO: IMPLEMENT ZIPCODE SEARCH FUNCTIONALITY-->
 
         <button type="submit" class="btn btn-search">Search</button>
     </div>
@@ -92,7 +93,7 @@
                     </td>
                     <td>
                         <div class="d-flex justify-content-between">
-                            <a class="btn btn-details resource-button asp-action="Details" asp-route-id="@item.Id">Details</a>
+                            <a class="btn btn-details resource-button" asp-action="Details" asp-route-id="@item.Id">Details</a>
 
                             @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
                             {

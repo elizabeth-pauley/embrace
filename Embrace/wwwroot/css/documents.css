@@ -1,0 +1,23 @@
+﻿.document-image img {
+    max-width: 7em;
+    max-height: 7em;
+    object-fit: cover;
+    padding: 0px;
+}
+
+.tbody {
+    padding-top: 0px;
+}
+
+.table .document-row {
+    height: auto;
+    padding-top: 0;
+}
+
+.doc-upload-left {
+    padding-top: .6em;
+}
+
+.doc-upload-description {
+    padding-bottom: 1em;
+}
