@@ -40,5 +40,7 @@ namespace Embrace.Data
         public DbSet<ServiceCategory> ServiceCategories { get; set; }
         public DbSet<ResourceServiceCategories> ResourceServiceCategories { get; set; }
         public DbSet<Document> Documents { get; set; }
+        public DbSet<DiscussionBoard> DiscussionBoards { get; set; }
+        public DbSet<Comment> Comments { get; set; }
     }
 }

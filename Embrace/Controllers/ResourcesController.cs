@@ -59,14 +59,14 @@ namespace Embrace.Controllers
                                                                        orderby sc.Name
                                                                        select sc;
 
-            var resourceTypeVM = new ResourceViewModel
+            var resourceVM = new ResourceViewModel
             {
                 ResourceTypes = new SelectList(await resourceTypeQuery.Distinct().ToListAsync()),
                 ServiceCategories = new SelectList(await resourceServiceCategoryQuery.Distinct().ToListAsync(), "Id", "Name"),
                 Resources = resources
             };
 
-            return View(resourceTypeVM);
+            return View(resourceVM);
         }
 
         // GET: Resources1/Details/5

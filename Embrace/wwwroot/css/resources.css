@@ -1,4 +1,8 @@
-﻿.resource-image {
+﻿.resource-list-description {
+    padding-top: .8em;
+}
+
+.resource-image {
     width: 8em;
 }
 .resource-image img {
@@ -23,13 +27,4 @@
     background-size: 16px 16px;
     background-repeat: no-repeat;
     background-position: left center;
-}
-
-.search-container {
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-.form-select, .form-control {
-    font-size: inherit;
 }

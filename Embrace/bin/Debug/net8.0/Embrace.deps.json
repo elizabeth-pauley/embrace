@@ -48,6 +48,7 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.7",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.11",
           "Pomelo.EntityFrameworkCore.MySql": "8.0.3",
+          "VSLangProj": "17.13.40008",
           "Microsoft.AspNetCore.Antiforgery": "8.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "8.0.0.0",
           "Microsoft.AspNetCore.Authentication.BearerToken": "8.0.0.0",
@@ -1978,6 +1979,31 @@
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {}
         }
       },
+      "Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime/17.13.40008": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll": {
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "14.0.25023.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll": {}
+        }
+      },
+      "Microsoft.VisualStudio.Interop/17.13.40008": {
+        "dependencies": {
+          "Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime": "17.13.40008"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.VisualStudio.Interop.dll": {
+            "assemblyVersion": "17.0.0.0",
+            "fileVersion": "17.13.40008.26641"
+          }
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.VisualStudio.Interop.dll": {}
+        }
+      },
       "Microsoft.VisualStudio.Web.CodeGeneration/8.0.7": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "8.0.1",
@@ -2634,6 +2660,20 @@
         },
         "compile": {
           "lib/net7.0/System.Windows.Extensions.dll": {}
+        }
+      },
+      "VSLangProj/17.13.40008": {
+        "dependencies": {
+          "Microsoft.VisualStudio.Interop": "17.13.40008"
+        },
+        "runtime": {
+          "lib/net8.0/VSLangProj.dll": {
+            "assemblyVersion": "17.0.0.0",
+            "fileVersion": "17.13.40008.26641"
+          }
+        },
+        "compile": {
+          "lib/net8.0/VSLangProj.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/8.0.0.0": {
@@ -5234,6 +5274,20 @@
       "path": "microsoft.sqlserver.server/1.0.0",
       "hashPath": "microsoft.sqlserver.server.1.0.0.nupkg.sha512"
     },
+    "Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime/17.13.40008": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Q76Oj9lFKjx9UKVP3TK2ruOy3XIjQNOo9Ta/IzcdpUSU/Av/GM5ow264d6cgmIdLtwzc1CTEr/UiGTuF0sxnjw==",
+      "path": "microsoft.visualstudio.imaging.interop.14.0.designtime/17.13.40008",
+      "hashPath": "microsoft.visualstudio.imaging.interop.14.0.designtime.17.13.40008.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Interop/17.13.40008": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hmyYuKLKskhWnb7bH5pGe55OOPh67Rl/V2iA5z+gM9h4IrHW19F8rkGwSkc9eZdJ3o5EFz2LGob/w0Yv25330Q==",
+      "path": "microsoft.visualstudio.interop/17.13.40008",
+      "hashPath": "microsoft.visualstudio.interop.17.13.40008.nupkg.sha512"
+    },
     "Microsoft.VisualStudio.Web.CodeGeneration/8.0.7": {
       "type": "package",
       "serviceable": true,
@@ -5660,6 +5714,13 @@
       "sha512": "sha512-bR4qdCmssMMbo9Fatci49An5B1UaVJZHKNq70PRgzoLYIlitb8Tj7ns/Xt5Pz1CkERiTjcVBDU2y1AVrPBYkaw==",
       "path": "system.windows.extensions/7.0.0",
       "hashPath": "system.windows.extensions.7.0.0.nupkg.sha512"
+    },
+    "VSLangProj/17.13.40008": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yvcd793UZobyX1SQ/XFx1NZ6jgpwmXwjVm5UJTdMYtw3MYDdYn0uCyd/D9ix/chH4JT6NE/+uHzbFsi4tc1ylg==",
+      "path": "vslangproj/17.13.40008",
+      "hashPath": "vslangproj.17.13.40008.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Antiforgery/8.0.0.0": {
       "type": "referenceassembly",

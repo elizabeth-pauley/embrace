@@ -22,6 +22,64 @@ namespace Embrace.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
+            modelBuilder.Entity("Embrace.Models.Comment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("DiscussionBoardId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DiscussionBoardId");
+
+                    b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("Embrace.Models.DiscussionBoard", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("DiscussionType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("DiscussionBoards");
+                });
+
             modelBuilder.Entity("Embrace.Models.Document", b =>
                 {
                     b.Property<int>("Id")
@@ -33,7 +91,15 @@ namespace Embrace.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("OriginalDataPath")
+                    b.Property<byte[]>("DocumentData")
+                        .IsRequired()
+                        .HasColumnType("longblob");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FilePath")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -49,10 +115,6 @@ namespace Embrace.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("TranslatedDataPath")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("varchar(255)");
@@ -61,7 +123,7 @@ namespace Embrace.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Documents", (string)null);
+                    b.ToTable("Documents");
                 });
 
             modelBuilder.Entity("Embrace.Models.Resource", b =>
@@ -103,7 +165,7 @@ namespace Embrace.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Resources", (string)null);
+                    b.ToTable("Resources");
                 });
 
             modelBuilder.Entity("Embrace.Models.ResourceServiceCategories", b =>
@@ -118,7 +180,7 @@ namespace Embrace.Migrations
 
                     b.HasIndex("ServiceCategoryId");
 
-                    b.ToTable("ResourceServiceCategories", (string)null);
+                    b.ToTable("ResourceServiceCategories");
                 });
 
             modelBuilder.Entity("Embrace.Models.ServiceCategory", b =>
@@ -129,13 +191,16 @@ namespace Embrace.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
-                    b.ToTable("ServiceCategories", (string)null);
+                    b.ToTable("ServiceCategories");
                 });
 
             modelBuilder.Entity("Embrace.Models.User", b =>
@@ -153,6 +218,9 @@ namespace Embrace.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("longtext");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
@@ -358,6 +426,28 @@ namespace Embrace.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Embrace.Models.Comment", b =>
+                {
+                    b.HasOne("Embrace.Models.DiscussionBoard", "DiscussionBoard")
+                        .WithMany("Comments")
+                        .HasForeignKey("DiscussionBoardId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("DiscussionBoard");
+                });
+
+            modelBuilder.Entity("Embrace.Models.DiscussionBoard", b =>
+                {
+                    b.HasOne("Embrace.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Embrace.Models.Document", b =>
                 {
                     b.HasOne("Embrace.Models.User", "User")
@@ -437,6 +527,11 @@ namespace Embrace.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Embrace.Models.DiscussionBoard", b =>
+                {
+                    b.Navigation("Comments");
                 });
 
             modelBuilder.Entity("Embrace.Models.Resource", b =>

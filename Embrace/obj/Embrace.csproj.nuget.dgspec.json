@@ -100,6 +100,10 @@
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "VSLangProj": {
+              "target": "Package",
+              "version": "[17.13.40008, )"
             }
           },
           "imports": [

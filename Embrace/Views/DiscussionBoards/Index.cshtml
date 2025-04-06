@@ -1,0 +1,85 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model Embrace.Models.DiscussionBoardViewModel
+@inject SignInManager<User> SignInManager
+
+@{
+    ViewData["Title"] = "Connection Corner";
+}
+
+<link rel="stylesheet" href="/css/discussionBoards.css" />
+
+<h1>Connection Corner</h1>
+
+<p class="connection-corner-description">Use this page to start a conversation, ask a question, find people to meet up with in your community, and more! Either start your own chat board or comment on someone else's to get started.</p>
+
+<form asp-controller="DiscussionBoards" asp-action="Index" method="get" class="search-container">
+    <div class="d-flex">
+        <a class="btn btn-create me-2" asp-action="Create">New Chat</a>
+        <select asp-for="DiscussionType" asp-items="Model.DiscussionTypes" class="form-select me-2">
+            <option value="" selected disabled>Select a discussion type</option>
+            <option value="">All</option>
+        </select>
+        <input type="text" name="SearchString" placeholder="Enter a searchword" class="form-control me-2" />
+
+        <button type="submit" class="btn btn-search">Search</button>
+    </div>
+</form>
+
+<section class="container my-5">
+    <div class="card-container">
+        @for (int i = 1; i <= 6; i++)
+        {
+            <div class="card square-card">
+                <div class="card-header d-flex">
+                    <img src="/images/chatIcon2.png" alt="Icon" class="card-icon me-2">
+                    <h5 class="card-title">Chat Board Title @i</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">This is a brief description that describes chat board @i.</p>
+                </div>
+                <div class="discussion-board-card-buttons">
+                    <a class="btn btn-primary" asp-action="Details" asp-route-id="">View</a> <!-- add at_symbolitem.Id -->
+                    @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                    {
+                        <a class="btn btn-success resource-button" asp-action="Edit" asp-route-id="">Edit</a> <!-- add at_symbolitem.Id -->
+                        <a class="btn btn-delete resource-button" asp-action="Delete" asp-route-id="">Delete</a>
+                    }
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <span class="card-count">Category: Question</span>
+                    <span class="card-footer-text">3/30/2025</span>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+
+<!--<table class="table">
+    <tbody>
+@foreach (var item in Model.DiscussionBoards!) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiscussionType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>-->

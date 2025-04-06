@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Y9wY0690qOIV+2utbi0PCDHlGhAFLHu3HB4jniZf628=",
+  "Hash": "RDwunlnaYQ5vxSPo4DVVX8Jllm5MUcQzJ5AdQUAKEpM=",
   "Source": "Embrace",
   "BasePath": "_content/Embrace",
   "Mode": "Default",
@@ -1195,6 +1195,25 @@
       "OriginalItemSpec": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Embrace.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\css\\discussionBoards.css",
+      "SourceId": "Embrace",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\",
+      "BasePath": "_content/Embrace",
+      "RelativePath": "css/discussionBoards.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\discussionBoards.css"
+    },
+    {
       "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\css\\documents.css",
       "SourceId": "Embrace",
       "SourceType": "Discovered",
@@ -1271,6 +1290,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\chatIcon2.png",
+      "SourceId": "Embrace",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\",
+      "BasePath": "_content/Embrace",
+      "RelativePath": "images/chatIcon2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\chatIcon2.png"
+    },
+    {
       "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\checkmarkIcon.png",
       "SourceId": "Embrace",
       "SourceType": "Discovered",
@@ -1309,12 +1347,12 @@
       "OriginalItemSpec": "wwwroot\\images\\connectionCornerLogo.jpg"
     },
     {
-      "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\documentIcon1.png",
+      "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\documentIcon.png",
       "SourceId": "Embrace",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\",
       "BasePath": "_content/Embrace",
-      "RelativePath": "images/documentIcon1.png",
+      "RelativePath": "images/documentIcon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1325,45 +1363,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\documentIcon1.png"
-    },
-    {
-      "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\documentIcon2.png",
-      "SourceId": "Embrace",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\",
-      "BasePath": "_content/Embrace",
-      "RelativePath": "images/documentIcon2.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\documentIcon2.png"
-    },
-    {
-      "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\documentIcon3.png",
-      "SourceId": "Embrace",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\",
-      "BasePath": "_content/Embrace",
-      "RelativePath": "images/documentIcon3.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\documentIcon3.png"
+      "OriginalItemSpec": "wwwroot\\images\\documentIcon.png"
     },
     {
       "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\documentTranslationLogo.jpg",
@@ -2542,6 +2542,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\UploadedDocuments\\vyqtiwly.g4c",
+      "SourceId": "Embrace",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\",
+      "BasePath": "_content/Embrace",
+      "RelativePath": "UploadedDocuments/vyqtiwly.g4c",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UploadedDocuments\\vyqtiwly.g4c"
     }
   ]
 }

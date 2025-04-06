@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\Embrace.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\UploadedDocuments\\vyqtiwly.g4c",
+      "PackagePath": "staticwebassets\\UploadedDocuments\\vyqtiwly.g4c"
+    },
+    {
+      "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\css\\discussionBoards.css",
+      "PackagePath": "staticwebassets\\css\\discussionBoards.css"
+    },
+    {
       "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\css\\documents.css",
       "PackagePath": "staticwebassets\\css\\documents.css"
     },
@@ -21,6 +29,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\chatIcon2.png",
+      "PackagePath": "staticwebassets\\images\\chatIcon2.png"
+    },
+    {
       "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\checkmarkIcon.png",
       "PackagePath": "staticwebassets\\images\\checkmarkIcon.png"
     },
@@ -29,16 +41,8 @@
       "PackagePath": "staticwebassets\\images\\connectionCornerLogo.jpg"
     },
     {
-      "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\documentIcon1.png",
-      "PackagePath": "staticwebassets\\images\\documentIcon1.png"
-    },
-    {
-      "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\documentIcon2.png",
-      "PackagePath": "staticwebassets\\images\\documentIcon2.png"
-    },
-    {
-      "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\documentIcon3.png",
-      "PackagePath": "staticwebassets\\images\\documentIcon3.png"
+      "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\documentIcon.png",
+      "PackagePath": "staticwebassets\\images\\documentIcon.png"
     },
     {
       "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\documentTranslationLogo.jpg",

@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Embrace.Models.Document>
+﻿@using Microsoft.AspNetCore.Identity
+@model Embrace.Models.DocumentViewModel
+@inject SignInManager<User> SignInManager
 
 @{
     ViewData["Title"] = "Document Translation";
@@ -14,12 +16,24 @@
             Having a hard time translating something? Upload your document here, select your preferred language, and receive a translated version back!
         </p>
         <a class="btn btn-create" asp-action="Create">Upload a New Document</a>
+        <!--<form enctype="multipart/form-data" method="post">
+            <dl>
+                <dt>
+                    <label asp-for="CreateDocumentViewModel.DocumentFile"></label>
+                </dt>
+                <dd>
+                    <input asp-for="FileUpload.FormFile" type="file" />
+                    <span asp-validation-for="FileUpload.FormFile"></span>
+                </dd>
+            </dl>
+            <input asp-page-handler="Upload" class="btn btn-create" type="submit" value="Upload" />
+        </form>-->
     </div>
 
     <div style="overflow-x:auto;" class="col-md-6">
         <table class="table table-borderless table-sm">
             <tbody>
-                @for (int i = 1; i <= 2; i++)
+                @foreach (var item in Model.Documents)
                 {
                     <tr class="document-row">
                         <td>
@@ -28,16 +42,16 @@
                             </div>
                         </td>
                         <td>
-                            Document @i
+                            @item.Title
                         </td>
                         <td>
-                            Uploaded On: 3/30/2025
+                            @item.CreatedOn.Date.ToShortDateString()
                         </td>
                         <td>
                             <div class="d-flex flex-column justify-content-between gap-2">
-                                <a class="btn btn-details document-button" asp-action="Details" asp-route-id="">Details</a>
-                                    <a class="btn btn-download document-button" asp-action="Download" asp-route-id="">Download</a>
-                                    <a class="btn btn-delete document-button" asp-action="Delete" asp-route-id="">Delete</a>
+                                <a class="btn btn-details document-button" asp-action="Details" asp-route-id=@item.Id>Details</a>
+                                    <a class="btn btn-download document-button" asp-action="Download" asp-route-id=@item.Id>Download</a>
+                                    <a class="btn btn-delete document-button" asp-action="Delete" asp-route-id=@item.Id>Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -49,7 +63,7 @@
 <!--
 <section class="container my-5">
     <div class="row">
-@foreach (var item in Model)
+@foreach (var item in Model.Documents)
 {
             <div class="col-md-4">
                 <div class="card shadow-sm">

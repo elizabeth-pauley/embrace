@@ -1940,6 +1940,35 @@
           }
         }
       },
+      "Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime/17.13.40008": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Interop/17.13.40008": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime": "17.13.40008"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.VisualStudio.Interop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.VisualStudio.Interop.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.VisualStudio.Web.CodeGeneration/8.0.7": {
         "type": "package",
         "dependencies": {
@@ -2970,6 +2999,22 @@
           "runtimes/win/lib/net7.0/System.Windows.Extensions.dll": {
             "assetType": "runtime",
             "rid": "win"
+          }
+        }
+      },
+      "VSLangProj/17.13.40008": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Interop": "17.13.40008"
+        },
+        "compile": {
+          "lib/net8.0/VSLangProj.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/VSLangProj.dll": {
+            "related": ".xml"
           }
         }
       }
@@ -6196,6 +6241,46 @@
         "microsoft.sqlserver.server.nuspec"
       ]
     },
+    "Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime/17.13.40008": {
+      "sha512": "Q76Oj9lFKjx9UKVP3TK2ruOy3XIjQNOo9Ta/IzcdpUSU/Av/GM5ow264d6cgmIdLtwzc1CTEr/UiGTuF0sxnjw==",
+      "type": "package",
+      "path": "microsoft.visualstudio.imaging.interop.14.0.designtime/17.13.40008",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "PackageIcon.png",
+        "lib/net20/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll",
+        "lib/net20/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.xml",
+        "lib/net472/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll",
+        "lib/net472/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.xml",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.xml",
+        "microsoft.visualstudio.imaging.interop.14.0.designtime.17.13.40008.nupkg.sha512",
+        "microsoft.visualstudio.imaging.interop.14.0.designtime.nuspec"
+      ]
+    },
+    "Microsoft.VisualStudio.Interop/17.13.40008": {
+      "sha512": "hmyYuKLKskhWnb7bH5pGe55OOPh67Rl/V2iA5z+gM9h4IrHW19F8rkGwSkc9eZdJ3o5EFz2LGob/w0Yv25330Q==",
+      "type": "package",
+      "path": "microsoft.visualstudio.interop/17.13.40008",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "PackageIcon.png",
+        "lib/net20/Microsoft.VisualStudio.Interop.dll",
+        "lib/net20/Microsoft.VisualStudio.Interop.xml",
+        "lib/net472/Microsoft.VisualStudio.Interop.dll",
+        "lib/net472/Microsoft.VisualStudio.Interop.xml",
+        "lib/net8.0/Microsoft.VisualStudio.Interop.dll",
+        "lib/net8.0/Microsoft.VisualStudio.Interop.xml",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Interop.dll",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Interop.xml",
+        "microsoft.visualstudio.interop.17.13.40008.nupkg.sha512",
+        "microsoft.visualstudio.interop.nuspec"
+      ]
+    },
     "Microsoft.VisualStudio.Web.CodeGeneration/8.0.7": {
       "sha512": "8WqtBA1DxiiEq1c2PjgkeFYHPC0WwC5Yl7FuDg41RQ6rvi661mSHCApzz3/rp/cfb8I7DiG1+3d01q5ck+BT1w==",
       "type": "package",
@@ -8290,6 +8375,29 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "VSLangProj/17.13.40008": {
+      "sha512": "yvcd793UZobyX1SQ/XFx1NZ6jgpwmXwjVm5UJTdMYtw3MYDdYn0uCyd/D9ix/chH4JT6NE/+uHzbFsi4tc1ylg==",
+      "type": "package",
+      "path": "vslangproj/17.13.40008",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "PackageIcon.png",
+        "lib/net20/VSLangProj.dll",
+        "lib/net20/VSLangProj.xml",
+        "lib/net45/VSLangProj.dll",
+        "lib/net45/VSLangProj.xml",
+        "lib/net472/VSLangProj.dll",
+        "lib/net472/VSLangProj.xml",
+        "lib/net8.0/VSLangProj.dll",
+        "lib/net8.0/VSLangProj.xml",
+        "lib/netstandard2.0/VSLangProj.dll",
+        "lib/netstandard2.0/VSLangProj.xml",
+        "vslangproj.17.13.40008.nupkg.sha512",
+        "vslangproj.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -8305,7 +8413,8 @@
       "Microsoft.NET.Runtime.WebAssembly.Sdk >= 8.0.14",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.7",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.11",
-      "Pomelo.EntityFrameworkCore.MySql >= 8.0.3"
+      "Pomelo.EntityFrameworkCore.MySql >= 8.0.3",
+      "VSLangProj >= 17.13.40008"
     ]
   },
   "packageFolders": {
@@ -8408,6 +8517,10 @@
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",
             "version": "[8.0.3, )"
+          },
+          "VSLangProj": {
+            "target": "Package",
+            "version": "[17.13.40008, )"
           }
         },
         "imports": [

@@ -4,21 +4,29 @@
 
 
 @{
-    ViewData["Title"] = "Resource List";
+    ViewData["Title"] = "Resources";
 }
 
 <link rel="stylesheet" href="/css/resources.css" />
 
 <h1>Resources</h1>
 
-@if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
-{
-    <p>
-        <a class="btn btn-create" asp-action="Create">Add a resource</a>
-    </p>
-}
+<p class="resource-list-description">
+    Use this page to search for resources that can help you in a variety of different categories. You can filter by the type of service offered, whether it is an in-person or online resource, and search by the name and zipcode of a resource.
+    <br />
+    <div class="fw-bold">Definitions</div>
+    In-Person - A resource that has an in-person location.
+    <br />
+    Online - A resource that can only be accessed online (although it might point you to more in-person resources on the website).
+</p>
 
 <form asp-controller="Resources" asp-action="Index" method="get" class="search-container">
+    @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+    {
+        <p>
+            <a class="btn btn-create" asp-action="Create">Add a resource</a>
+        </p>
+    }
     <div class="d-flex">
         <select asp-for="ResourceType" asp-items="Model.ResourceTypes" class="form-select me-2">
             <option value="" selected disabled>Select a resource type</option>
@@ -39,12 +47,12 @@
 
 <div style="overflow-x:auto;">
     <table class="table table-borderless table-sm">
-        <thead class="resource-header">
-            <tr>
+        <thead>
+            <tr class="resource-header"">
                 <th>
+                    <h4>Resource</h4>
                 </th>
                 <th>
-                    <h4>Resource Name</h4>
                 </th>
                 <th>
                     <h4>Type</h4>
@@ -94,12 +102,12 @@
                     <td>
                         <div class="d-flex justify-content-between">
                             <a class="btn btn-details resource-button" asp-action="Details" asp-route-id="@item.Id">Details</a>
-
                             @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
                             {
                                 <a class="btn btn-success resource-button" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
                                 <a class="btn btn-delete resource-button" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                             }
+                            <a class="btn btn-save resource-button" asp-action="Save" asp-route-id="@item.Id">Save</a>
                         </div>
                     </td>
                 </tr>

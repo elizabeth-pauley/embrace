@@ -4,10 +4,10 @@ namespace Embrace.Models
 {
     public enum ResourceType
     {
-        [Description("Local")]
+        [Description("In-Person")]
         Local,
 
-        [Description("General")]
+        [Description("Online")]
         General
     }
 }

@@ -8,6 +8,18 @@ html {
     }
 }
 
+/* search bar styling */
+.search-container {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+
+.form-select, .form-control {
+    font-size: inherit;
+}
+/* end search bar styling */
+
 /* button styling */
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
@@ -15,6 +27,7 @@ html {
 
 .btn {
     color: white;
+    white-space: nowrap;
 }
 
 .btn-create {
@@ -41,6 +54,15 @@ html {
 
 .btn-details:hover {
     background-color: #c4a700;
+    color: white;
+}
+
+.btn-save {
+    background-color: #EB9E46;
+}
+
+.btn-save:hover {
+    background-color: #D58932;
     color: white;
 }
 
@@ -178,15 +200,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .table td, .table th {
-    padding: 1em;
+    padding: .7em;
     align-content: center;
+    text-align: left;
 }
 
 .table th h4 {
     color: white;
+    padding: 2px;
 }
 
-.table .resource-header {
+.resource-header {
     background-color: #004080;
     box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
 }
@@ -195,4 +219,10 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #ffffff;
     border-radius: 50px;
     box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+}
+
+.footer {
+    bottom: 0px;
+    margin-bottom: 0px;
+    width: 100%;
 }
