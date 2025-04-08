@@ -9,7 +9,7 @@ using System.Security.Claims;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
-// Add services to the container.
+// Add services to the container
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ApplicationDbContext>();
 
@@ -26,6 +26,9 @@ builder.Services.AddIdentity<User, IdentityRole>()
 
 builder.Services.AddAuthorization();
 builder.Services.AddAuthentication();
+
+// TO-DO: set up so that it only does this if builder.Environment.IsDevelopment()
+builder.Configuration.AddUserSecrets<Program>();
 
 var app = builder.Build();
 

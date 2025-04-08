@@ -16,23 +16,12 @@
             Having a hard time translating something? Upload your document here, select your preferred language, and receive a translated version back!
         </p>
         <a class="btn btn-create" asp-action="Create">Upload a New Document</a>
-        <!--<form enctype="multipart/form-data" method="post">
-            <dl>
-                <dt>
-                    <label asp-for="CreateDocumentViewModel.DocumentFile"></label>
-                </dt>
-                <dd>
-                    <input asp-for="FileUpload.FormFile" type="file" />
-                    <span asp-validation-for="FileUpload.FormFile"></span>
-                </dd>
-            </dl>
-            <input asp-page-handler="Upload" class="btn btn-create" type="submit" value="Upload" />
-        </form>-->
     </div>
 
     <div style="overflow-x:auto;" class="col-md-6">
         <table class="table table-borderless table-sm">
             <tbody>
+                <!-- check if user signed in, also if no documents then display text to say that-->
                 @foreach (var item in Model.Documents)
                 {
                     <tr class="document-row">
@@ -49,8 +38,11 @@
                         </td>
                         <td>
                             <div class="d-flex flex-column justify-content-between gap-2">
-                                <a class="btn btn-details document-button" asp-action="Details" asp-route-id=@item.Id>Details</a>
-                                    <a class="btn btn-download document-button" asp-action="Download" asp-route-id=@item.Id>Download</a>
+                                @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                                {
+                                    <a class="btn btn-details document-button" asp-action="Details" asp-route-id=@item.Id>Details</a>
+                                }
+                                <a class="btn btn-primary document-button" asp-action="ViewDocument" asp-route-id=@item.Id>View</a>
                                     <a class="btn btn-delete document-button" asp-action="Delete" asp-route-id=@item.Id>Delete</a>
                             </div>
                         </td>
@@ -60,26 +52,3 @@
         </table>
     </div>
 </div>
-<!--
-<section class="container my-5">
-    <div class="row">
-@foreach (var item in Model.Documents)
-{
-            <div class="col-md-4">
-                <div class="card shadow-sm">
-                            <img src="/images/documentIcon1.png" class="card-img-top" alt="Document Icon">
-                            <div class="card-body">
-                                <h5 class="card-title">@item.Title</h5>
-                                <p class="card-text">Uploaded on: @item.CreatedOn.ToShortDateString()</p>
-                                <div class="d-flex justify-content-between">
-                                    <a class="btn btn-primary" asp-action="Details" asp-route-id=@item.Id>Details</a>
-                                    <a class="btn btn-success" asp-action="Download" asp-route-id=@item.Id>Download</a>
-                                    <a class="btn btn-danger" asp-action="Delete" asp-route-id=@item.Id>Delete</a>
-                                </div>
-                            </div>
-                </div>
-            </div>
-}
-    </div>
-</section>
--->

@@ -7,13 +7,12 @@ namespace Embrace.Models
     {
         public int Id { get; set; }
         public string Title { get; set; } = "Untitled Document";
-        public string FileName { get; set; }
-        public string FilePath { get; set; }
+        public string UploadedFileName { get; set; }
+        public string TranslatedFileName { get; set; }
+        public string UploadedFilePath { get; set; }
+        public string TranslatedFilePath { get; set; }
         public string OriginalLanguage { get; set; }
-        //public string OriginalDataPath { get; set; }
-        //public string TranslatedDataPath { get; set; }
         public string TargetLanguage { get; set; }
-        public byte[] DocumentData { get; set;  }
         [DataType(DataType.Date)]
         public DateTime CreatedOn { get; set; }
 

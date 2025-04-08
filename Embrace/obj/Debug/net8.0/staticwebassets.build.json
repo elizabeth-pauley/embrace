@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RDwunlnaYQ5vxSPo4DVVX8Jllm5MUcQzJ5AdQUAKEpM=",
+  "Hash": "jL41UuUdf8zCzpTKcdo7Z615g1kCbZ8aask/FuPXrSY=",
   "Source": "Embrace",
   "BasePath": "_content/Embrace",
   "Mode": "Default",
@@ -2542,6 +2542,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\UploadedDocuments\\3483c54d-fdd1-480d-acc1-ade657994000_TestDocument",
+      "SourceId": "Embrace",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\",
+      "BasePath": "_content/Embrace",
+      "RelativePath": "UploadedDocuments/3483c54d-fdd1-480d-acc1-ade657994000_TestDocument",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UploadedDocuments\\3483c54d-fdd1-480d-acc1-ade657994000_TestDocument"
     },
     {
       "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\UploadedDocuments\\vyqtiwly.g4c",

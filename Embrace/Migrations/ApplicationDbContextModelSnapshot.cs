@@ -91,18 +91,6 @@ namespace Embrace.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<byte[]>("DocumentData")
-                        .IsRequired()
-                        .HasColumnType("longblob");
-
-                    b.Property<string>("FileName")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("FilePath")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("OriginalLanguage")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -112,6 +100,22 @@ namespace Embrace.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("TranslatedFileName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("TranslatedFilePath")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("UploadedFileName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("UploadedFilePath")
                         .IsRequired()
                         .HasColumnType("longtext");
 
