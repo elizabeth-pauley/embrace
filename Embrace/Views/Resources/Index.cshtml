@@ -48,7 +48,7 @@
 <div style="overflow-x:auto;">
     <table class="table table-borderless table-sm">
         <thead>
-            <tr class="resource-header"">
+            <tr class="resource-header">
                 <th>
                     <h4>Resource</h4>
                 </th>
@@ -101,13 +101,13 @@
                     </td>
                     <td>
                         <div class="d-flex justify-content-between">
-                            <a class="btn btn-details resource-button" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                            <a class="btn btn-details resource-button" asp-action="Details" asp-route-id=@item.Id>Details</a>
                             @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
                             {
-                                <a class="btn btn-success resource-button" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                                <a class="btn btn-delete resource-button" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                <a class="btn btn-success resource-button" asp-action="Edit" asp-route-id=@item.Id>Edit</a>
+                                <a class="btn btn-delete resource-button" asp-action="Delete" asp-route-id=@item.Id>Delete</a>
                             }
-                            <a class="btn btn-save resource-button" asp-action="Save" asp-route-id="@item.Id">Save</a>
+                            <a class="btn btn-save resource-button" asp-action="Save" asp-route-id=@item.Id>Save</a>
                         </div>
                     </td>
                 </tr>

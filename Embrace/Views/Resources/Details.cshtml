@@ -1,21 +1,45 @@
-﻿@model Embrace.Models.Resource
+﻿@using Microsoft.AspNetCore.Identity
+@model Embrace.Models.Resource
+@inject SignInManager<User> SignInManager
 
 @{
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Resource</h4>
-    <hr />
+<h1>@Html.DisplayFor(model => model.ResourceName)</h1>
+    <body>
+        <div class="resource-details-image">
+                @if (!string.IsNullOrEmpty(Model.LocationImage))
+                {
+                    <img src="@Model.LocationImage" alt="Location Image" />
+                }
+                else if (!string.IsNullOrEmpty(Model.LogoImage))
+                {
+                    <img src="@Model.LogoImage" alt="Logo Image" />
+                }
+                else
+                {
+                    <img src="/images/resourcePlaceholderImage.jpg" alt="No Resource Image Available" />
+                }
+        </div>
+        @Html.DisplayFor(model => model.Description)
+    </body>
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AddressId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AddressId)
-        </dd>
+        @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+        {
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.AddressId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.AddressId)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.LogoImage)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.LogoImage)
+            </dd>
+        }
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.ResourceType)
         </dt>
@@ -35,22 +59,10 @@
             @Html.DisplayFor(model => model.ServiceCategories)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.LogoImage)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LogoImage)
-        </dd>
-        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.LocationImage)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.LocationImage)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.PhoneNumber)
