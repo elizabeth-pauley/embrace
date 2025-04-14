@@ -10,7 +10,9 @@ namespace Embrace.Models
         [DataType(DataType.Date)]
         public DateTime CreatedOn { get; set; }
 
-        public required int DiscussionBoardId { get; set; }
-        public required DiscussionBoard DiscussionBoard { get; set; }
+        [Required]
+        public virtual User User { get; set; }
+        [Required]
+        public virtual DiscussionBoard DiscussionBoard { get; set; }
     }
 }

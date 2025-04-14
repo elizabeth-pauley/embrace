@@ -65,7 +65,7 @@ namespace Embrace.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DiscussionBoardId"] = new SelectList(_context.DiscussionBoards, "Id", "Id", comment.DiscussionBoardId);
+            ViewData["DiscussionBoardId"] = new SelectList(_context.DiscussionBoards, "Id", "Id", comment.DiscussionBoard.Id);
             return View(comment);
         }
 
@@ -82,7 +82,7 @@ namespace Embrace.Controllers
             {
                 return NotFound();
             }
-            ViewData["DiscussionBoardId"] = new SelectList(_context.DiscussionBoards, "Id", "Id", comment.DiscussionBoardId);
+            ViewData["DiscussionBoardId"] = new SelectList(_context.DiscussionBoards, "Id", "Id", comment.DiscussionBoard.Id);
             return View(comment);
         }
 
@@ -118,7 +118,7 @@ namespace Embrace.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DiscussionBoardId"] = new SelectList(_context.DiscussionBoards, "Id", "Id", comment.DiscussionBoardId);
+            ViewData["DiscussionBoardId"] = new SelectList(_context.DiscussionBoards, "Id", "Id", comment.DiscussionBoard.Id);
             return View(comment);
         }
 

@@ -16,7 +16,7 @@ namespace Embrace.Models
         [DataType(DataType.Date)]
         public DateTime CreatedOn { get; set; }
 
-        public required string UserId { get; set; }
-        public required User User { get; set; }
+        [Required]
+        public virtual User User { get; set; }
     }
 }

@@ -112,7 +112,6 @@ namespace Embrace.Controllers
                 Title = vm.Title,
                 OriginalLanguage = vm.OriginalLanguage,
                 TargetLanguage = vm.TargetLanguage,
-                UserId = userId!,
                 User = _context.Users.FindAsync(userId!).Result!,
                 CreatedOn = DateTime.Now
             };
@@ -217,7 +216,7 @@ namespace Embrace.Controllers
             {
                 return NotFound();
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", document.UserId);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", document.User.Id);
             return View(document);
         }
 
@@ -253,7 +252,7 @@ namespace Embrace.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", document.UserId);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", document.User.Id);
             return View(document);
         }
 

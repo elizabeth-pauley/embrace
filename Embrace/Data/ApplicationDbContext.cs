@@ -8,6 +8,7 @@ namespace Embrace.Data
 {
     public class ApplicationDbContext: IdentityDbContext<User>
     {
+        // Main class that interacts with data as objects
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
 
@@ -35,12 +36,14 @@ namespace Embrace.Data
             builder.Entity<IdentityRole>().HasData(new IdentityRole() { Id = "2", Name = "User" });
         }
 
-
+        // Represent tables (will have additional tables as ApplicationDbContext inherits from IdentityDbContext)
         public DbSet<Resource> Resources { get; set; }
         public DbSet<ServiceCategory> ServiceCategories { get; set; }
         public DbSet<ResourceServiceCategories> ResourceServiceCategories { get; set; }
         public DbSet<Document> Documents { get; set; }
+        public DbSet<Forum> Forums { get; set; }
         public DbSet<DiscussionBoard> DiscussionBoards { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
