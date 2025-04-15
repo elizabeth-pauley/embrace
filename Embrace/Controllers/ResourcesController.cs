@@ -9,6 +9,7 @@ using Embrace.Data;
 using Embrace.Models;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.View;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Identity;
 
 namespace Embrace.Controllers
 {

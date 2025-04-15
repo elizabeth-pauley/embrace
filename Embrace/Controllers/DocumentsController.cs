@@ -37,7 +37,6 @@ namespace Embrace.Controllers
             _context = context;
             _userManager = userManager;
             _hostEnvironment = hostEnvironment;
-            //_documentsFolderPath = Path.Combine(_hostEnvironment.WebRootPath, "UploadedDocuments");
             _uploadedDocumentsBucket = "embrace-uploaded-documents";
             _translatedDocumentsBucket = "embrace-translated-documents";
 
@@ -75,7 +74,7 @@ namespace Embrace.Controllers
             }
 
             var document = await _context.Documents
-                .Include(d => d.User)
+                .Include(d => d.UserId)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (document == null)
             {
@@ -112,8 +111,7 @@ namespace Embrace.Controllers
                 Title = vm.Title,
                 OriginalLanguage = vm.OriginalLanguage,
                 TargetLanguage = vm.TargetLanguage,
-                User = _context.Users.FindAsync(userId!).Result!,
-                CreatedOn = DateTime.Now
+                UserId = userId,
             };
 
             if (vm.DocumentFile != null && vm.DocumentFile.Length > 0)
@@ -216,7 +214,7 @@ namespace Embrace.Controllers
             {
                 return NotFound();
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", document.User.Id);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", document.UserId);
             return View(document);
         }
 
@@ -252,7 +250,7 @@ namespace Embrace.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", document.User.Id);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", document.UserId);
             return View(document);
         }
 
@@ -265,7 +263,7 @@ namespace Embrace.Controllers
             }
 
             var document = await _context.Documents
-                .Include(d => d.User)
+                .Include(d => d.UserId)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (document == null)
             {

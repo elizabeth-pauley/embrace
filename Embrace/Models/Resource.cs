@@ -21,6 +21,6 @@ namespace Embrace.Models
         [Display(Name = "Website Link")]
         public string? WebsiteUrl { get; set; }
         [DataType(DataType.Date)]
-        public DateTime CreatedOn { get; set; }
+        public DateTime CreatedOn { get; set; } = DateTime.Now;
     }
 }

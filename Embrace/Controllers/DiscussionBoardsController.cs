@@ -7,16 +7,19 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Embrace.Data;
 using Embrace.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Embrace.Controllers
 {
     public class DiscussionBoardsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<User> _userManager;
 
-        public DiscussionBoardsController(ApplicationDbContext context)
+        public DiscussionBoardsController(ApplicationDbContext context, UserManager<User> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: DiscussionBoards
@@ -28,7 +31,7 @@ namespace Embrace.Controllers
             if (!string.IsNullOrEmpty(searchString))
             {
                 discussionBoardQuery = discussionBoardQuery.Where(x => x.Title!.ToUpper().Contains(searchString.ToUpper()) ||
-                                                                        x.Description!.ToUpper().Contains(searchString.ToUpper()));
+                                                                        x.Content!.ToUpper().Contains(searchString.ToUpper()));
             }
 
             // Filter by discussion type
@@ -41,8 +44,8 @@ namespace Embrace.Controllers
 
             // Use LINQ to get list of discussion types + tags
             IQueryable<DiscussionType> discussionTypeQuery = from r in _context.DiscussionBoards
-                                                         orderby r.DiscussionType
-                                                         select r.DiscussionType;
+                                                             orderby r.DiscussionType
+                                                             select r.DiscussionType;
 
             var discussionBoardVM = new DiscussionBoardViewModel
             {
@@ -51,6 +54,7 @@ namespace Embrace.Controllers
             };
 
             return View(discussionBoardVM);
+
         }
 
         // GET: DiscussionBoards/Details/5
@@ -62,7 +66,6 @@ namespace Embrace.Controllers
             }
 
             var discussionBoard = await _context.DiscussionBoards
-                .Include(d => d.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (discussionBoard == null)
             {
@@ -75,7 +78,6 @@ namespace Embrace.Controllers
         // GET: DiscussionBoards/Create
         public IActionResult Create()
         {
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
             return View();
         }
 
@@ -84,16 +86,31 @@ namespace Embrace.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,DiscussionType,Title,Description,CreatedOn,UserId")] DiscussionBoard discussionBoard)
+        public async Task<IActionResult> Create([Bind("Title,Content,DiscussionType")] CreateDiscussionBoardViewModel vm)
         {
             if (ModelState.IsValid)
             {
+                var discussionBoard = new DiscussionBoard
+                {
+                    Title = vm.Title,
+                    Content = vm.Content,
+                    DiscussionType = vm.DiscussionType,
+                    UserId = _userManager.GetUserId(User)!,
+                    CreatedOn = DateTime.Now
+                };
+
                 _context.Add(discussionBoard);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", discussionBoard.User.Id);
-            return View(discussionBoard);
+            // If validation fails, repopulate the SelectList so the dropdown gets rendered.
+            vm.DiscussionTypes = new SelectList(Enum.GetValues(typeof(DiscussionType)).Cast<DiscussionType>());
+
+            // Optionally repopulate any other dropdowns you might have.
+            var userId = _userManager.GetUserId(User);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", userId);
+
+            return View(vm);
         }
 
         // GET: DiscussionBoards/Edit/5
@@ -109,7 +126,6 @@ namespace Embrace.Controllers
             {
                 return NotFound();
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", discussionBoard.User.Id);
             return View(discussionBoard);
         }
 
@@ -118,7 +134,7 @@ namespace Embrace.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,DiscussionType,Title,Description,CreatedOn,UserId")] DiscussionBoard discussionBoard)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,DiscussionType,Title,Content,CreatedOn,UserId")] DiscussionBoard discussionBoard)
         {
             if (id != discussionBoard.Id)
             {
@@ -145,7 +161,6 @@ namespace Embrace.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", discussionBoard.User.Id);
             return View(discussionBoard);
         }
 
@@ -158,7 +173,6 @@ namespace Embrace.Controllers
             }
 
             var discussionBoard = await _context.DiscussionBoards
-                .Include(d => d.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (discussionBoard == null)
             {

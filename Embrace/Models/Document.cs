@@ -14,8 +14,10 @@ namespace Embrace.Models
         public string OriginalLanguage { get; set; }
         public string TargetLanguage { get; set; }
         [DataType(DataType.Date)]
-        public DateTime CreatedOn { get; set; }
+        public DateTime CreatedOn { get; set; } = DateTime.Now;
 
+        [Required]
+        public virtual string UserId { get; set; }
         [Required]
         public virtual User User { get; set; }
     }

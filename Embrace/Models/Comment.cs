@@ -8,7 +8,7 @@ namespace Embrace.Models
         public required string Content { get; set; }
 
         [DataType(DataType.Date)]
-        public DateTime CreatedOn { get; set; }
+        public DateTime CreatedOn { get; set; } = DateTime.Now;
 
         [Required]
         public virtual User User { get; set; }

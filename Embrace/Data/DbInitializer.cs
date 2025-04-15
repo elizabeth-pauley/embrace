@@ -29,7 +29,6 @@ namespace Embrace.Data
                     new ServiceCategory { Name = "Housing"},
                     new ServiceCategory { Name = "Employment"},
                     new ServiceCategory { Name = "Social Engagement"}
-
                 };
 
                 context.ServiceCategories.AddRange(serviceCategories);
