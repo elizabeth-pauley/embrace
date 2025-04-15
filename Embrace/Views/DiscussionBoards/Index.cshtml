@@ -47,23 +47,23 @@
             @foreach (var item in Model.DiscussionBoards)
             {
                 <div class="card">
-                    <div class="card-header d-flex">
+                    <a class="card-header d-flex" asp-action="Details" asp-route-id=@item.Id>
                         <img src="/images/chatIcon2.png" alt="Icon" class="card-icon me-2">
                         <h5 class="card-title">@item.Title</h5>
-                    </div>
+                    </a>
+
                     <div class="card-body">
                         <p class="card-text">@item.Content</p>
                     </div>
                     <div class="discussion-board-card-buttons">
-                        <a class="btn btn-primary" asp-action="Details" asp-route-id=@item.Id>View</a> <!-- add at_symbolitem.Id -->
                         @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
                         {
-                            <a class="btn btn-success resource-button" asp-action="Edit" asp-route-id="">Edit</a> <!-- add at_symbolitem.Id -->
-                            <a class="btn btn-delete resource-button" asp-action="Delete" asp-route-id="">Delete</a>
+                            <a class="btn btn-success resource-button" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <a class="btn btn-delete resource-button" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                         }
                     </div>
                     <div class="card-footer d-flex justify-content-between">
-                        <span class="card-count">Category: @item.DiscussionType</span>
+                        <span class="card-footer-text">Comments: @item.Comments.Count()</span>
                         <span class="card-footer-text">@item.CreatedOn.Date.ToShortDateString()</span>
                     </div>
                 </div>
@@ -72,33 +72,15 @@
     </div>
 </section>
 
-
-<!--<table class="table">
-        <tbody>
-@foreach (var item in Model.DiscussionBoards!)
-{
-            <tr>
-                <td>
-            @Html.DisplayFor(modelItem => item.DiscussionType)
-                </td>
-                <td>
-            @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-            @Html.DisplayFor(modelItem => item.Content)
-                </td>
-                <td>
-            @Html.DisplayFor(modelItem => item.CreatedOn)
-                </td>
-                <td>
-            @Html.DisplayFor(modelItem => item.UserId)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
-}
-    </tbody>
-</table>-->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const paragraphs = document.querySelectorAll('.card-body p');
+        paragraphs.forEach(function(p) {
+            if (p.scrollHeight > p.clientHeight) {
+                p.classList.add('fade-if-overflow');
+            } else {
+                p.classList.remove('fade-if-overflow');
+            }
+        });
+    });
+</script>

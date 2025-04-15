@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Embrace\\wwwroot\\css\\discussionBoards.css",
               "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\css\\discussionBoards.css",
               "RelativeToolTip": "Embrace\\wwwroot\\css\\discussionBoards.css",
-              "ViewState": "AgIAADMAAAAAAAAAAAAkwEEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-04-15T03:28:41.941Z",
               "EditorCaption": ""
@@ -49,7 +49,7 @@
               "RelativeDocumentMoniker": "Embrace\\Views\\DiscussionBoards\\Index.cshtml",
               "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\DiscussionBoards\\Index.cshtml",
               "RelativeToolTip": "Embrace\\Views\\DiscussionBoards\\Index.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAADEAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAD4v1QAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-15T00:20:22.171Z",
               "EditorCaption": ""
@@ -64,8 +64,7 @@
               "RelativeToolTip": "Embrace\\Controllers\\DiscussionBoardsController.cs",
               "ViewState": "AgIAAEsAAAAAAAAAAAAAAFIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T02:36:01.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T02:36:01.522Z"
             },
             {
               "$type": "Document",
@@ -77,8 +76,7 @@
               "RelativeToolTip": "Embrace\\Models\\CreateDiscussionBoardViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T02:33:45.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T02:33:45.502Z"
             }
           ]
         }

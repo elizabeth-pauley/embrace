@@ -2,6 +2,13 @@
     padding-top: 0.8em;
 }
 
+:root {
+    --base: 1.35; /* Handy multiplier for consistency across elements */
+    --background: hsl(360 100% 100%);
+}
+
+/* card styling reference code: https://codepen.io/collection/XLRrqW/ */
+/* fading effect reference code: https://css-tricks.com/recreating-mdns-truncated-text-effect/*/
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -41,11 +48,37 @@
     padding: 0.5em;
 }
 
+.card-title {
+    margin: 0px;
+}
+
+.card-body p {
+    max-height: calc(9rem * var(--base)); /* Set a cut-off point for the content */
+    overflow: hidden; /* Cut off the content */
+    position: relative;
+}
+
+.card-body p.fade-if-overflow:after {
+    content: "";
+    background: linear-gradient(to right, transparent, var(--background) 80%);
+    display: block;
+    height: calc(1rem * var(--base) + 10px);
+    inset-block-end: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
 .card-icon {
     width: 30px;
     height: 30px;
     object-fit: contain;
     margin-right: 0.5rem;
+}
+
+.card-text {
+    margin: 0px;
 }
 
 .card-footer {
