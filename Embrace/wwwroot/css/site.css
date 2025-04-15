@@ -8,17 +8,29 @@ html {
     }
 }
 
-/* search bar styling */
-.search-container {
-    padding-top: 1em;
-    padding-bottom: 1em;
+.search-container .d-flex {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: .5rem;
 }
 
+.search-container .btn,
+.search-container .form-select,
+.search-container .form-control {
+    flex: 1 1 auto; /* they can grow/shrink as needed */
+    min-width: 6em; /* prevents them from becoming too narrow */
+}
 
 .form-select, .form-control {
     font-size: inherit;
+    margin: 2px;
 }
-/* end search bar styling */
+
+@media (max-width: 62em) {
+    .search-container .d-flex {
+        flex-wrap: wrap;
+    }
+}
 
 /* button styling */
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -32,6 +44,7 @@ html {
 .btn {
     color: white;
     white-space: nowrap;
+    margin: 2px;
 }
 
 .btn-create {

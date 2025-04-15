@@ -21,98 +21,100 @@
     Online - A resource that can only be accessed online (although it might point you to more in-person resources on the website).
 </p>
 
-<form asp-controller="Resources" asp-action="Index" method="get" class="search-container">
-    @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
-    {
-        <p>
-            <a class="btn btn-create" asp-action="Create">Add a resource</a>
-        </p>
-    }
-    <div class="d-flex">
-        <select asp-for="ResourceType" asp-items="Model.ResourceTypes" class="form-select me-2">
-            <option value="" selected disabled>Select a resource type</option>
-            <option value="">All</option>
-        </select>
+<div class="container-test">
+    <form asp-controller="Resources" asp-action="Index" method="get" class="search-container">
+        @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+        {
+            <p>
+                <a class="btn btn-create" asp-action="Create">Add a resource</a>
+            </p>
+        }
+        <div class="d-flex">
+            <select asp-for="ResourceType" asp-items="Model.ResourceTypes" class="form-select">
+                <option value="" selected disabled>Select a resource type</option>
+                <option value="">All</option>
+            </select>
 
-        <select asp-for="ServiceCategoryId" asp-items="Model.ServiceCategories" class="form-select me-2">
-            <option value="" selected disabled>Select a service category</option>
-            <option value="">All</option>
-        </select>
+            <select asp-for="ServiceCategoryId" asp-items="Model.ServiceCategories" class="form-select">
+                <option value="" selected disabled>Select a service category</option>
+                <option value="">All</option>
+            </select>
 
-        <input type="text" name="SearchString" placeholder="Enter a searchword" class="form-control me-2" />
-        <input type="text" name="ZipSearchString" placeholder="Enter a zipcode" class="form-control me-2" /> <!-- TO-DO: IMPLEMENT ZIPCODE SEARCH FUNCTIONALITY-->
+            <input type="text" name="SearchString" placeholder="Enter a searchword" class="form-control" />
+            <input type="text" name="ZipSearchString" placeholder="Enter a zipcode" class="form-control" /> <!-- TO-DO: IMPLEMENT ZIPCODE SEARCH FUNCTIONALITY-->
 
-        <button type="submit" class="btn btn-search">Search</button>
-    </div>
-</form>
+            <button type="submit" class="btn btn-search">Search</button>
+        </div>
+    </form>
 
-<div style="overflow-x:auto;">
-    <table class="table table-borderless table-sm">
-        <thead>
-            <tr class="resource-header">
-                <th>
-                    <h4>Resource</h4>
-                </th>
-                <th>
-                </th>
-                <th>
-                    <h4>Type</h4>
-                </th>
-                <th>
-                    <h4>Service Categories</h4>
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.Resources!)
-            {
-                <tr class="resource-row">
-                    <td>
-                        <div class="resource-image">
-                            @if (!string.IsNullOrEmpty(item.LocationImage))
-                            {
-                                <img src="@item.LocationImage" alt="Location Image" />
-                            }
-                            else if (!string.IsNullOrEmpty(item.LogoImage))
-                            {
-                                <img src="@item.LogoImage" alt="Logo Image" />
-                            }
-                            else
-                            {
-                                <img src="/images/resourcePlaceholderImage.jpg" alt="No Resource Image Available" />
-                            }
-                        </div>
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ResourceName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ResourceType)
-                    </td>
-                    <td>
-                        <ul class="service-categories">
-                            @foreach (var category in item.ServiceCategories)
-                            {
-                                <li class="checkmark-bullet">
-                                    @category.ServiceCategory.Name
-                                </li>
-                            }
-                        </ul>
-                    </td>
-                    <td>
-                        <div class="d-flex justify-content-between">
-                            <a class="btn btn-details resource-button" asp-action="Details" asp-route-id=@item.Id>Details</a>
-                            @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
-                            {
-                                <a class="btn btn-success resource-button" asp-action="Edit" asp-route-id=@item.Id>Edit</a>
-                                <a class="btn btn-delete resource-button" asp-action="Delete" asp-route-id=@item.Id>Delete</a>
-                            }
-                            <a class="btn btn-save resource-button" asp-action="Save" asp-route-id=@item.Id>Save</a>
-                        </div>
-                    </td>
+    <div style="overflow-x:auto;">
+        <table class="table table-borderless table-sm">
+            <thead>
+                <tr class="resource-header">
+                    <th>
+                        <h4>Resource</h4>
+                    </th>
+                    <th>
+                    </th>
+                    <th>
+                        <h4>Type</h4>
+                    </th>
+                    <th>
+                        <h4>Service Categories</h4>
+                    </th>
+                    <th></th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Resources!)
+                {
+                    <tr class="resource-row">
+                        <td>
+                            <div class="resource-image">
+                                @if (!string.IsNullOrEmpty(item.LocationImage))
+                                {
+                                    <img src="@item.LocationImage" alt="Location Image" />
+                                }
+                                else if (!string.IsNullOrEmpty(item.LogoImage))
+                                {
+                                    <img src="@item.LogoImage" alt="Logo Image" />
+                                }
+                                else
+                                {
+                                    <img src="/images/resourcePlaceholderImage.jpg" alt="No Resource Image Available" />
+                                }
+                            </div>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ResourceName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ResourceType)
+                        </td>
+                        <td>
+                            <ul class="service-categories">
+                                @foreach (var category in item.ServiceCategories)
+                                {
+                                    <li class="checkmark-bullet">
+                                        @category.ServiceCategory.Name
+                                    </li>
+                                }
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-details resource-button" asp-action="Details" asp-route-id=@item.Id>Details</a>
+                                @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                                {
+                                    <a class="btn btn-success resource-button" asp-action="Edit" asp-route-id=@item.Id>Edit</a>
+                                    <a class="btn btn-delete resource-button" asp-action="Delete" asp-route-id=@item.Id>Delete</a>
+                                }
+                                <a class="btn btn-save resource-button" asp-action="Save" asp-route-id=@item.Id>Save</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>

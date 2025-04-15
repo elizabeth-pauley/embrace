@@ -14,12 +14,12 @@
 
 <form asp-controller="DiscussionBoards" asp-action="Index" method="get" class="search-container">
     <div class="d-flex">
-        <a class="btn btn-create me-2" asp-action="Create">New Chat</a>
-        <select asp-for="DiscussionType" asp-items="Model.DiscussionTypes" class="form-select me-2">
+        <a class="btn btn-create" asp-action="Create">New Chat</a>
+        <select asp-for="DiscussionType" asp-items="Model.DiscussionTypes" class="form-select">
             <option value="" selected disabled>Select a discussion type</option>
             <option value="">All</option>
         </select>
-        <input type="text" name="SearchString" placeholder="Enter a searchword" class="form-control me-2" />
+        <input type="text" name="SearchString" placeholder="Enter a searchword" class="form-control" />
 
         <button type="submit" class="btn btn-search">Search</button>
     </div>
@@ -46,11 +46,12 @@
         {
             @foreach (var item in Model.DiscussionBoards)
             {
-                <div class="card">
-                    <a class="card-header d-flex" asp-action="Details" asp-route-id=@item.Id>
+                <a class="card" asp-action="Details" asp-route-id=@item.Id>
+                    <div class="card-header d-flex">
                         <img src="/images/chatIcon2.png" alt="Icon" class="card-icon me-2">
                         <h5 class="card-title">@item.Title</h5>
-                    </a>
+                        <span class="conversation-tag">@item.DiscussionType.GetDescription()</span>
+                    </div>
 
                     <div class="card-body">
                         <p class="card-text">@item.Content</p>
@@ -66,7 +67,7 @@
                         <span class="card-footer-text">Comments: @item.Comments.Count()</span>
                         <span class="card-footer-text">@item.CreatedOn.Date.ToShortDateString()</span>
                     </div>
-                </div>
+                </a>
             }
         }
     </div>

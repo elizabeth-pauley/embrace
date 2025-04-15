@@ -35,7 +35,7 @@
     }
 }
 
-@media screen and (min-width: 85em) {
+@media screen and (min-width: 88em) {
     .cards {
         display: flex;
         flex-wrap: wrap;
@@ -49,12 +49,33 @@
     }
 }
 
-.card-header {
+.card-header, .card-header:hover {
     display: flex;
     align-items: center;
     font-size: 1.1rem;
     width: 100%;
     padding: 0.5em;
+    text-decoration: none;
+    color: #000000;
+}
+
+.conversation-tag {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: #e8f2ff; /* a light-blue background, similar to your screenshot */
+    color: #3178c6; /* text color */
+    border: 1px solid #b2d4ff; /* border color */
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.card:hover {
+    transform: scale(1.02);
 }
 
 .card-title {
@@ -62,9 +83,10 @@
 }
 
 .card-body p {
-    max-height: calc(7rem * var(--base)); /* Set a cut-off point for the content */
-    overflow: hidden; /* Cut off the content */
+    max-height: calc(7rem * var(--base));
+    overflow: hidden; /* truncate text so that it stays within the body area */
     position: relative;
+    font-size: .9em;
 }
 
 .card-body p.fade-if-overflow:after {
