@@ -1,20 +1,17 @@
-﻿@model Embrace.Models.DiscussionBoard
+﻿@model Embrace.Models.CreateDiscussionBoardViewModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "New Conversation";
 }
 
-<h1>Create</h1>
-
-<h4>DiscussionBoard</h4>
-<hr />
+<h1>New Conversation</h1>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="DiscussionType" class="control-label"></label>
-                <select asp-for="DiscussionType" class="form-control"></select>
+                <select asp-for="DiscussionType" asp-items="Model.DiscussionTypes" class="form-select me-2"></select>
                 <span asp-validation-for="DiscussionType" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -26,16 +23,6 @@
                 <label asp-for="Content" class="control-label"></label>
                 <input asp-for="Content" class="form-control" />
                 <span asp-validation-for="Content" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreatedOn" class="control-label"></label>
-                <input asp-for="CreatedOn" class="form-control" />
-                <span asp-validation-for="CreatedOn" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UserId" class="control-label"></label>
-                <input asp-for="UserId" class="form-control" />
-                <span asp-validation-for="UserId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

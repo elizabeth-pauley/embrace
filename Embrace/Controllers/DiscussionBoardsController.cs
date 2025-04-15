@@ -78,7 +78,11 @@ namespace Embrace.Controllers
         // GET: DiscussionBoards/Create
         public IActionResult Create()
         {
-            return View();
+            var vm = new CreateDiscussionBoardViewModel
+            {
+                DiscussionTypes = new SelectList(Enum.GetValues(typeof(DiscussionType)).Cast<DiscussionType>())
+            };
+            return View(vm);
         }
 
         // POST: DiscussionBoards/Create

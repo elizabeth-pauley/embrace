@@ -3,116 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\controllers\\discussionboardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\controllers\\discussionboardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\models\\discussionboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\models\\discussionboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\wwwroot\\css\\discussionboards.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\wwwroot\\css\\discussionboards.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\views\\discussionboards\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\views\\discussionboards\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\controllers\\resourcescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\controllers\\resourcescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\controllers\\discussionboardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\controllers\\discussionboardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\views\\documents\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\views\\documents\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\views\\documents\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\views\\documents\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\views\\discussionboards\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\views\\discussionboards\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\views\\discussionboards\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\views\\discussionboards\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\views\\discussionboards\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\views\\discussionboards\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\views\\documents\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\views\\documents\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\models\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\models\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\models\\enumhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\models\\enumhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\models\\documentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\models\\documentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\models\\discussiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\models\\discussiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\models\\discussionboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\models\\discussionboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\models\\createdocumentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\models\\createdocumentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\models\\resourceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\models\\resourceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\views\\resources\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\views\\resources\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\views\\documents\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\views\\documents\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\models\\resourcetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\models\\resourcetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\views\\resources\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\views\\resources\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|c:\\users\\ep\\onedrive\\montanastateuniversity\\spring2025\\csci483\\embrace\\embrace\\models\\creatediscussionboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A453B0E9-68BF-439F-8130-C1E77E2C3985}|Embrace\\Embrace.csproj|solutionrelative:embrace\\models\\creatediscussionboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -122,108 +26,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 237,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DiscussionBoardsController.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Controllers\\DiscussionBoardsController.cs",
-              "RelativeDocumentMoniker": "Embrace\\Controllers\\DiscussionBoardsController.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Controllers\\DiscussionBoardsController.cs",
-              "RelativeToolTip": "Embrace\\Controllers\\DiscussionBoardsController.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGEAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T02:00:23.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\Documents\\Details.cshtml",
-              "RelativeDocumentMoniker": "Embrace\\Views\\Documents\\Details.cshtml",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\Documents\\Details.cshtml",
-              "RelativeToolTip": "Embrace\\Views\\Documents\\Details.cshtml",
-              "ViewState": "AgIAACsAAAAAAAAAAAAYwDIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T01:57:50.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Resource.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\Resource.cs",
-              "RelativeDocumentMoniker": "Embrace\\Models\\Resource.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\Resource.cs",
-              "RelativeToolTip": "Embrace\\Models\\Resource.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T17:08:12.794Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\Documents\\Create.cshtml",
-              "RelativeDocumentMoniker": "Embrace\\Views\\Documents\\Create.cshtml",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\Documents\\Create.cshtml",
-              "RelativeToolTip": "Embrace\\Views\\Documents\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T00:16:43.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DiscussionBoard.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\DiscussionBoard.cs",
-              "RelativeDocumentMoniker": "Embrace\\Models\\DiscussionBoard.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\DiscussionBoard.cs",
-              "RelativeToolTip": "Embrace\\Models\\DiscussionBoard.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T13:25:01.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\DiscussionBoards\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Embrace\\Views\\DiscussionBoards\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\DiscussionBoards\\Delete.cshtml",
-              "RelativeToolTip": "Embrace\\Views\\DiscussionBoards\\Delete.cshtml",
-              "ViewState": "AgIAABcAAAAAAAAAAAAYwCkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T00:30:53.021Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DocumentsController.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Controllers\\DocumentsController.cs",
-              "RelativeDocumentMoniker": "Embrace\\Controllers\\DocumentsController.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Controllers\\DocumentsController.cs",
-              "RelativeToolTip": "Embrace\\Controllers\\DocumentsController.cs",
-              "ViewState": "AgIAABcBAAAAAAAAAAAEwB4BAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T13:49:21.402Z",
+              "Title": "discussionBoards.css",
+              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\css\\discussionBoards.css",
+              "RelativeDocumentMoniker": "Embrace\\wwwroot\\css\\discussionBoards.css",
+              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\css\\discussionBoards.css",
+              "RelativeToolTip": "Embrace\\wwwroot\\css\\discussionBoards.css",
+              "ViewState": "AgIAADMAAAAAAAAAAAAkwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-15T03:28:41.941Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\DiscussionBoards\\Index.cshtml",
               "RelativeDocumentMoniker": "Embrace\\Views\\DiscussionBoards\\Index.cshtml",
               "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\DiscussionBoards\\Index.cshtml",
               "RelativeToolTip": "Embrace\\Views\\DiscussionBoards\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAADEAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-15T00:20:22.171Z",
               "EditorCaption": ""
@@ -231,260 +57,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Document.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\Document.cs",
-              "RelativeDocumentMoniker": "Embrace\\Models\\Document.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\Document.cs",
-              "RelativeToolTip": "Embrace\\Models\\Document.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAuAAAAAAAAAA==",
+              "Title": "DiscussionBoardsController.cs",
+              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Controllers\\DiscussionBoardsController.cs",
+              "RelativeDocumentMoniker": "Embrace\\Controllers\\DiscussionBoardsController.cs",
+              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Controllers\\DiscussionBoardsController.cs",
+              "RelativeToolTip": "Embrace\\Controllers\\DiscussionBoardsController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T01:54:36.307Z",
+              "WhenOpened": "2025-04-15T02:36:01.522Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ResourcesController.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Controllers\\ResourcesController.cs",
-              "RelativeDocumentMoniker": "Embrace\\Controllers\\ResourcesController.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Controllers\\ResourcesController.cs",
-              "RelativeToolTip": "Embrace\\Controllers\\ResourcesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "CreateDiscussionBoardViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\CreateDiscussionBoardViewModel.cs",
+              "RelativeDocumentMoniker": "Embrace\\Models\\CreateDiscussionBoardViewModel.cs",
+              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\CreateDiscussionBoardViewModel.cs",
+              "RelativeToolTip": "Embrace\\Models\\CreateDiscussionBoardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T02:01:20.301Z",
+              "WhenOpened": "2025-04-15T02:33:45.502Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\DiscussionBoards\\Details.cshtml",
-              "RelativeDocumentMoniker": "Embrace\\Views\\DiscussionBoards\\Details.cshtml",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\DiscussionBoards\\Details.cshtml",
-              "RelativeToolTip": "Embrace\\Views\\DiscussionBoards\\Details.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAcwCUAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T01:52:19.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\DiscussionBoards\\Create.cshtml",
-              "RelativeDocumentMoniker": "Embrace\\Views\\DiscussionBoards\\Create.cshtml",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\DiscussionBoards\\Create.cshtml",
-              "RelativeToolTip": "Embrace\\Views\\DiscussionBoards\\Create.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAACUAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T00:45:18.341Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\Documents\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Embrace\\Views\\Documents\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\Documents\\Delete.cshtml",
-              "RelativeToolTip": "Embrace\\Views\\Documents\\Delete.cshtml",
-              "ViewState": "AgIAACMAAAAAAAAAAAAYwDUAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T01:57:43.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Embrace\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Embrace\\Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T01:48:58.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "EnumHelper.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\EnumHelper.cs",
-              "RelativeDocumentMoniker": "Embrace\\Models\\EnumHelper.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\EnumHelper.cs",
-              "RelativeToolTip": "Embrace\\Models\\EnumHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T01:48:56.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DocumentViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\DocumentViewModel.cs",
-              "RelativeDocumentMoniker": "Embrace\\Models\\DocumentViewModel.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\DocumentViewModel.cs",
-              "RelativeToolTip": "Embrace\\Models\\DocumentViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T01:48:53.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "DiscussionBoardViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\DiscussionBoardViewModel.cs",
-              "RelativeDocumentMoniker": "Embrace\\Models\\DiscussionBoardViewModel.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\DiscussionBoardViewModel.cs",
-              "RelativeToolTip": "Embrace\\Models\\DiscussionBoardViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T00:19:18.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "DiscussionType.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\DiscussionType.cs",
-              "RelativeDocumentMoniker": "Embrace\\Models\\DiscussionType.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\DiscussionType.cs",
-              "RelativeToolTip": "Embrace\\Models\\DiscussionType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T00:19:19.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ResourceViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\ResourceViewModel.cs",
-              "RelativeDocumentMoniker": "Embrace\\Models\\ResourceViewModel.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\ResourceViewModel.cs",
-              "RelativeToolTip": "Embrace\\Models\\ResourceViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T16:41:24.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\Resources\\Index.cshtml",
-              "RelativeDocumentMoniker": "Embrace\\Views\\Resources\\Index.cshtml",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\Resources\\Index.cshtml",
-              "RelativeToolTip": "Embrace\\Views\\Resources\\Index.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACAAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-08T22:43:28.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "DbInitializer.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Data\\DbInitializer.cs",
-              "RelativeDocumentMoniker": "Embrace\\Data\\DbInitializer.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Data\\DbInitializer.cs",
-              "RelativeToolTip": "Embrace\\Data\\DbInitializer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T01:22:27.617Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CreateDocumentViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\CreateDocumentViewModel.cs",
-              "RelativeDocumentMoniker": "Embrace\\Models\\CreateDocumentViewModel.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\CreateDocumentViewModel.cs",
-              "RelativeToolTip": "Embrace\\Models\\CreateDocumentViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T01:28:30.009Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Embrace\\Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "Embrace\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T00:45:07.734Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\Documents\\Index.cshtml",
-              "RelativeDocumentMoniker": "Embrace\\Views\\Documents\\Index.cshtml",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\Documents\\Index.cshtml",
-              "RelativeToolTip": "Embrace\\Views\\Documents\\Index.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABcAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T00:33:39.19Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Embrace\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Embrace\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAcwCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T13:14:55.022Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ResourceType.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\ResourceType.cs",
-              "RelativeDocumentMoniker": "Embrace\\Models\\ResourceType.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Models\\ResourceType.cs",
-              "RelativeToolTip": "Embrace\\Models\\ResourceType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T00:20:05.279Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "CommentsController.cs",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Controllers\\CommentsController.cs",
-              "RelativeDocumentMoniker": "Embrace\\Controllers\\CommentsController.cs",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Controllers\\CommentsController.cs",
-              "RelativeToolTip": "Embrace\\Controllers\\CommentsController.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAADwv3gAAABqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T13:48:37.401Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\Resources\\Details.cshtml",
-              "RelativeDocumentMoniker": "Embrace\\Views\\Resources\\Details.cshtml",
-              "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\Resources\\Details.cshtml",
-              "RelativeToolTip": "Embrace\\Views\\Resources\\Details.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAADMAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-13T16:36:32.704Z"
             }
           ]
         }

@@ -1,76 +1,69 @@
 ﻿.connection-corner-description {
-    padding-top: .8em;
+    padding-top: 0.8em;
 }
 
-.card-container {
+.cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-/* card styling */
-.square-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    display: inline-flex;
-    flex-direction: column;
-    height: 100%;
-    background-color: #fff;
-    max-height: 18em;
+.card {
+    margin: .2em;
+    flex: 1 0 100%;
+    height: 15em;
 }
 
-.card-body {
-    flex-grow: 1;
+@media screen and (min-width: 62em) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
 }
 
-/* card header */
-.card-title {
-    margin: 0px;
+@media screen and (min-width: 85em) {
+
+    .card {
+        flex: 0 1 calc(34% - 1em);
+    }
 }
+
 .card-header {
-    width: 100%;
     display: flex;
     align-items: center;
     font-size: 1.1rem;
+    width: 100%;
+    padding: 0.5em;
 }
 
 .card-icon {
     width: 30px;
     height: 30px;
     object-fit: contain;
+    margin-right: 0.5rem;
 }
 
 .card-footer {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 1rem;
     background-color: #f8f9fa;
     font-size: 0.9rem;
+    width: 100%;
 }
 
 .card-count {
     font-weight: bold;
 }
 
+
 .discussion-board-card-buttons {
     width: 100%;
-    margin: 0px 18px 10px 0px;
+    margin: 0 18px 10px 0;
     text-align: right;
-}
-
-/* ensure square shape */
-.square-card {
-    aspect-ratio: 1;
-}
-
-@media (max-width: 767px) {
-    .square-card {
-        aspect-ratio: 1;
-    }
-
-    .row {
-        gap: 0.5rem;
-    }
 }

@@ -1,12 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
 
 namespace Embrace.Models
 {
     public class CreateDiscussionBoardViewModel
     {
-        public required DiscussionType DiscussionType { get; set; }
-        public required string Title { get; set; }
-        public required string Content { get; set; }
+        [Required]
+        public DiscussionType DiscussionType { get; set; }
+        [Required]
+        public string Title { get; set; }
+        [Required]
+        public string Content { get; set; }
 
         public SelectList? DiscussionTypes { get; set; }
     }
