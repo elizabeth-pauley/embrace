@@ -54,8 +54,7 @@
               "RelativeToolTip": "Embrace\\Views\\DiscussionBoards\\Index.cshtml",
               "ViewState": "AgIAAAIAAAAAAAAAAAAhwBQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T20:39:10.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T20:39:10.068Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "Embrace\\wwwroot\\css\\site.css",
               "ViewState": "AgIAABIAAAAAAAAAAAAAAAwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-04-15T19:12:31.335Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T19:12:31.335Z"
             },
             {
               "$type": "Document",
@@ -93,8 +91,7 @@
               "RelativeToolTip": "Embrace\\wwwroot\\css\\resources.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-04-15T21:04:06.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T21:04:06.787Z"
             },
             {
               "$type": "Document",
@@ -106,8 +103,7 @@
               "RelativeToolTip": "Embrace\\Views\\Documents\\Index.cshtml",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T20:54:44.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T20:54:44.597Z"
             },
             {
               "$type": "Document",
@@ -119,8 +115,7 @@
               "RelativeToolTip": "Embrace\\Views\\Resources\\Index.cshtml",
               "ViewState": "AgIAACQAAAAAAAAAAAD4vzIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T20:38:54.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T20:38:54.556Z"
             },
             {
               "$type": "Document",
@@ -132,8 +127,7 @@
               "RelativeToolTip": "Embrace\\Controllers\\DiscussionBoardsController.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAAAFYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T02:36:01.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T02:36:01.522Z"
             },
             {
               "$type": "Document",
@@ -145,8 +139,7 @@
               "RelativeToolTip": "Embrace\\Models\\CreateDiscussionBoardViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T02:33:45.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T02:33:45.502Z"
             }
           ]
         }

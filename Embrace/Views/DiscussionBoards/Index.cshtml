@@ -50,7 +50,7 @@
                     <div class="card-header d-flex">
                         <img src="/images/chatIcon2.png" alt="Icon" class="card-icon me-2">
                         <h5 class="card-title">@item.Title</h5>
-                        <span class="conversation-tag">@item.DiscussionType.GetDescription()</span>
+                        <span class="discussion-tag @GetTagClass(@item.DiscussionType)">@item.DiscussionType.GetDescription()</span>
                     </div>
 
                     <div class="card-body">
@@ -85,3 +85,18 @@
         });
     });
 </script>
+
+@functions {
+    // returns a CSS class based on the discussion type for coloring purposes
+    private string GetTagClass(DiscussionType discussionType)
+    {
+        return discussionType switch
+        {
+            DiscussionType.Question => "question-tag",
+            DiscussionType.Conversation => "conversation-tag",
+            DiscussionType.MeetUp => "meetup-tag",
+            DiscussionType.Other => "other-tag",
+            _ => ""
+        };
+    }
+}
