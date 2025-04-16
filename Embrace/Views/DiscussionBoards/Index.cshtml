@@ -14,7 +14,10 @@
 
 <form asp-controller="DiscussionBoards" asp-action="Index" method="get" class="search-container">
     <div class="d-flex">
-        <a class="btn btn-create" asp-action="Create">New Chat</a>
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <a class="btn btn-create" asp-action="Create">New Chat</a>
+        }
         <select asp-for="DiscussionType" asp-items="Model.DiscussionTypes" class="form-select">
             <option value="" selected disabled>Select a discussion type</option>
             <option value="">All</option>
@@ -26,14 +29,8 @@
 </form>
 
 <section class="centered">
-    <div class="cards">
-        @if (Model.DiscussionBoards!.Count == 0)
+    @if (Model.DiscussionBoards!.Count == 0)
         {
-            @if (Model.SearchString != "")
-            {
-                <p class="no-discussion-boards">No conversations contain your search term(s).</p>
-
-            }
             @if (SignInManager.IsSignedIn(User))
             {
                 <p class="no-discussion-boards">There are currently no conversations! Click the "New Chat" button above to start your own.</p>
@@ -44,33 +41,37 @@
             }
         } else
         {
-            @foreach (var item in Model.DiscussionBoards)
-            {
-                <a class="card" asp-action="Details" asp-route-id=@item.Id>
-                    <div class="card-header d-flex">
-                        <img src="/images/chatIcon2.png" alt="Icon" class="card-icon me-2">
-                        <h5 class="card-title">@item.Title</h5>
-                        <span class="discussion-tag @GetTagClass(@item.DiscussionType)">@item.DiscussionType.GetDescription()</span>
-                    </div>
+            <div class="cards">
+                    @foreach (var item in Model.DiscussionBoards)
+                    {
+                        <a class="card" asp-action="Details" asp-route-id=@item.Id>
+                            <div class="card-header d-flex">
+                                <div class="header-left">
+                                    <h5 class="card-title">@item.Title</h5>
+                                </div>
+                                <div class="header-right">
+                                    <div class="discussion-tag @GetTagClass(@item.DiscussionType)">@item.DiscussionType.GetDescription()</div>
+                                </div>
+                            </div>
 
-                    <div class="card-body">
-                        <p class="card-text">@item.Content</p>
-                    </div>
-                    <div class="discussion-board-card-buttons">
-                        @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
-                        {
-                            <a class="btn btn-success resource-button" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                            <a class="btn btn-delete resource-button" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                        }
-                    </div>
-                    <div class="card-footer d-flex justify-content-between">
-                        <span class="card-footer-text">Comments: @item.Comments.Count()</span>
-                        <span class="card-footer-text">@item.CreatedOn.Date.ToShortDateString()</span>
-                    </div>
-                </a>
+                            <div class="card-body">
+                                <p class="card-text">@item.Content</p>
+                            </div>
+                            <div class="discussion-board-card-buttons">
+                                @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                                {
+                                    <a class="btn btn-success resource-button" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                    <a class="btn btn-delete resource-button" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                }
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <span class="card-footer-text">Comments: @item.Comments.Count()</span>
+                                <span class="card-footer-text">@item.CreatedOn.Date.ToShortDateString()</span>
+                            </div>
+                        </a>
+                    }
+            </div>
             }
-        }
-    </div>
 </section>
 
 <script>
@@ -95,6 +96,8 @@
             DiscussionType.Question => "question-tag",
             DiscussionType.Conversation => "conversation-tag",
             DiscussionType.MeetUp => "meetup-tag",
+            DiscussionType.Announcement => "announcement-tag",
+            DiscussionType.Event => "event-tag",
             DiscussionType.Other => "other-tag",
             _ => ""
         };

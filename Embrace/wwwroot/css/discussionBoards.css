@@ -7,6 +7,12 @@
     --background: hsl(360 100% 100%);
 }
 
+.no-discussion-boards {
+    margin: 4em;
+    text-align: center;
+    justify-content: center;
+}
+
 /* card styling reference code: https://codepen.io/collection/XLRrqW/ */
 /* fading effect reference code: https://css-tricks.com/recreating-mdns-truncated-text-effect/*/
 .cards {
@@ -51,6 +57,8 @@
 
 .card-header, .card-header:hover {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.1rem;
     width: 100%;
@@ -59,8 +67,22 @@
     color: #000000;
 }
 
+.header-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    margin: 0px;
+    gap: 0.5rem;
+}
+
+.header-right {
+    width: fit-content;
+    justify-content: center;
+    justify-items: right;
+}
+
 .discussion-tag {
-    position: absolute;
     top: 0.5rem;
     right: 0.5rem;
     border-radius: 4px;
@@ -68,29 +90,43 @@
     font-size: 0.85rem;
     font-weight: 600;
     white-space: nowrap;
-    display: inline-block;
+    object-fit: contain;
+    width: fit-content;
+    flex-shrink: 0;
 }
 
 .question-tag {
-    background-color: #dafad2;
+    background-color: #dafad2; /* green */
     color: #285c1b;
     border: 1px solid #285c1b;
 }
 
 .conversation-tag {
-    background-color: #d6e3f4;
+    background-color: #d6e3f4; /* blue */
     color: #3178c6;
     border: 1px solid #3178c6;
 }
 
 .meetup-tag {
-    background-color: #fadeb9;
+    background-color: #fadeb9; /* orange */
     color: #cb7b11;
     border: 1px solid #cb7b11;
 }
 
+.announcement-tag {
+    background-color: #e3dfff; /* purple */
+    color: #46355f;
+    border: 1px solid #46355f;
+}
+
+.event-tag {
+    background-color: #fff5ff; /* pink */
+    color: #800065;
+    border: 1px solid #800065;
+}
+
 .other-tag {
-    background-color: #d8d8d8;
+    background-color: #d8d8d8; /* gray */
     color: #515151;
     border: 1px solid #515151;
 }
@@ -101,6 +137,7 @@
 
 .card-title {
     margin: 0px;
+    text-align: left;
 }
 
 .card-body p {

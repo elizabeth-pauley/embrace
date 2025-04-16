@@ -13,7 +13,14 @@ namespace Embrace.Models
         [Description("Question")]
         Question,
 
+        [Description("Announcement")]
+        Announcement,
+
+        [Description("Event")]
+        Event,
+
         [Description("Other")]
+
         Other
     }
 }
