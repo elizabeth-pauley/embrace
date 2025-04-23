@@ -1,48 +1,51 @@
 ﻿@model Embrace.Models.DiscussionBoard
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = Model.Title;
 }
 
-<h1>Details</h1>
+<link rel="stylesheet" href="/css/discussionBoards.css" />
 
-<div>
-    <h4>DiscussionBoard</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DiscussionType)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DiscussionType)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Content)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Content)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedOn)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CreatedOn)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UserId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UserId)
-        </dd>
-    </dl>
+<div class="title-row">
+    <div class="title-card">
+        <div class="title-card-body">
+            <div class="title-tag">
+                <h2>@Model.Title</h2>
+                <div class="discussion-tag @GetTagClass(@Model.DiscussionType)">@Model.DiscussionType.GetDescription()</div>
+            </div>
+            <div class="title-card-metadata">
+                <div class="title-user">
+                    <img class="user-icon" src="/images/userIconLogo.png" alt="User Icon Image" />
+                    <p>@Model.User.FirstName</p>
+                </div>
+                <div class="title-date-posted">
+                    <img class="user-icon" src="/images/clockIconLogo.png" alt="Clock Icon Image" />
+                    <p>Posted: @Model.CreatedOn.Date.ToShortDateString()</p>
+                </div>
+            </div>
+            <p>@Model.Content</p>
+        </div>
+    </div>
 </div>
+
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+
+@functions {
+    // returns a CSS class based on the discussion type for coloring purposes
+    private string GetTagClass(DiscussionType discussionType)
+    {
+        return discussionType switch
+        {
+            DiscussionType.Question => "question-tag",
+            DiscussionType.Conversation => "conversation-tag",
+            DiscussionType.MeetUp => "meetup-tag",
+            DiscussionType.Announcement => "announcement-tag",
+            DiscussionType.Event => "event-tag",
+            DiscussionType.Other => "other-tag",
+            _ => ""
+        };
+    }
+}

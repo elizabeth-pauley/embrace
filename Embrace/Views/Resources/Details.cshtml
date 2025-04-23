@@ -10,7 +10,7 @@
 <body>
     <div class="row">
         <div class="description-column">
-            <h1>@Html.DisplayFor(model => model.ResourceName)</h1>
+            <h2>@Html.DisplayFor(model => model.ResourceName)</h2>
             <div class="resource-description">@Html.DisplayFor(model => model.Description)</div>
             <a class="btn btn-primary document-button" href="@Model.WebsiteUrl" target="_blank">Visit Website</a>
         </div>
@@ -94,7 +94,7 @@
                 @Html.DisplayNameFor(model => model.Address)
             </dt>
             <dd class="col-sm-10">
-                <p>No address exists for this resource. Consider visiting the organization website to learn more.</p>
+                <p>No address currently exists for this resource. Consider visiting the organization website to learn more.</p>
             </dd>
         }
     }
@@ -107,11 +107,10 @@
             @Html.DisplayFor(model => model.PhoneNumber)
         } else
         {
-            <p>Phone number is not available for @Model.ResourceName. Consider visiting the organization website to learn more.</p>
+            <p>Phone number is not currently available for @Model.ResourceName. Consider visiting the organization website to learn more.</p>
         }
     </dd>
     </dl>
-</div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>

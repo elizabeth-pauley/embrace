@@ -66,6 +66,8 @@ namespace Embrace.Controllers
             }
 
             var discussionBoard = await _context.DiscussionBoards
+                .Include(c => c.Comments)
+                .Include(u => u.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (discussionBoard == null)
             {

@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\images\\checkmarkIcon.png"
     },
     {
+      "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\clockIconLogo.png",
+      "PackagePath": "staticwebassets\\images\\clockIconLogo.png"
+    },
+    {
       "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\connectionCornerLogo.jpg",
       "PackagePath": "staticwebassets\\images\\connectionCornerLogo.jpg"
     },
@@ -53,16 +57,16 @@
       "PackagePath": "staticwebassets\\images\\embraceLogo.png"
     },
     {
-      "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\resourcePlaceholderImage.jpg",
-      "PackagePath": "staticwebassets\\images\\resourcePlaceholderImage.jpg"
-    },
-    {
       "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\resourcePlaceholderImage.png",
       "PackagePath": "staticwebassets\\images\\resourcePlaceholderImage.png"
     },
     {
       "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\resourcesLogo.jpg",
       "PackagePath": "staticwebassets\\images\\resourcesLogo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\userIconLogo.png",
+      "PackagePath": "staticwebassets\\images\\userIconLogo.png"
     },
     {
       "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\js\\site.js",

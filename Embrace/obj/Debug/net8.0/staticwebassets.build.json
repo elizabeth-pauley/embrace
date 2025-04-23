@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZNvE3jsaFKodyLcIp3A9NUm2rDa7XYW02xKZH7IPhTE=",
+  "Hash": "kXv6AebAeQaRFFIDRYa3AJwmujGLjkTiGhOGQ0/wnAc=",
   "Source": "Embrace",
   "BasePath": "_content/Embrace",
   "Mode": "Default",
@@ -1309,6 +1309,25 @@
       "OriginalItemSpec": "wwwroot\\images\\checkmarkIcon.png"
     },
     {
+      "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\clockIconLogo.png",
+      "SourceId": "Embrace",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\",
+      "BasePath": "_content/Embrace",
+      "RelativePath": "images/clockIconLogo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\clockIconLogo.png"
+    },
+    {
       "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\connectionCornerLogo.jpg",
       "SourceId": "Embrace",
       "SourceType": "Discovered",
@@ -1385,25 +1404,6 @@
       "OriginalItemSpec": "wwwroot\\images\\embraceLogo.png"
     },
     {
-      "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\resourcePlaceholderImage.jpg",
-      "SourceId": "Embrace",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\",
-      "BasePath": "_content/Embrace",
-      "RelativePath": "images/resourcePlaceholderImage.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\resourcePlaceholderImage.jpg"
-    },
-    {
       "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\resourcePlaceholderImage.png",
       "SourceId": "Embrace",
       "SourceType": "Discovered",
@@ -1440,6 +1440,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\resourcesLogo.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\userIconLogo.png",
+      "SourceId": "Embrace",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\",
+      "BasePath": "_content/Embrace",
+      "RelativePath": "images/userIconLogo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\userIconLogo.png"
     },
     {
       "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\js\\site.js",
