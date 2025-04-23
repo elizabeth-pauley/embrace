@@ -69,12 +69,19 @@ namespace Embrace.Controllers
                 .Include(c => c.Comments)
                 .Include(u => u.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (discussionBoard == null)
             {
                 return NotFound();
             }
 
-            return View(discussionBoard);
+            var discussionBoardDetailViewModel = new DiscussionBoardDetailViewModel
+            {
+                DiscussionBoard = discussionBoard,
+                Comments = discussionBoard.Comments.OrderByDescending(c => c.CreatedOn).ToList()
+            };
+
+            return View(discussionBoardDetailViewModel);
         }
 
         // GET: DiscussionBoards/Create
@@ -207,5 +214,43 @@ namespace Embrace.Controllers
         {
             return _context.DiscussionBoards.Any(e => e.Id == id);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddComment(CreateCommentViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var comment = new Comment
+                {
+                    Content = model.NewCommentContent,
+                    CreatedOn = DateTime.Now,
+                    DiscussionBoardId = model.DiscussionBoardId,
+                    UserId = _userManager.GetUserId(User)
+                };
+
+                _context.Comments.Add(comment);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Details", new { id = model.DiscussionBoardId });
+            }
+
+            // Reload the board and comments in case of model error
+            var board = await _context.DiscussionBoards
+                .Include(d => d.User)
+                .Include(d => d.Comments)
+                .ThenInclude(c => c.User)
+                .FirstOrDefaultAsync(d => d.Id == model.DiscussionBoardId);
+
+            var viewModel = new DiscussionBoardDetailViewModel
+            {
+                DiscussionBoard = board,
+                Comments = board.Comments.OrderByDescending(c => c.CreatedOn).ToList(),
+                NewCommentContent = model.NewCommentContent
+            };
+
+            return View("Details", viewModel);
+        }
+
     }
 }

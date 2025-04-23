@@ -14,5 +14,10 @@ namespace Embrace.Models
         public virtual User User { get; set; }
         [Required]
         public virtual DiscussionBoard DiscussionBoard { get; set; }
+
+        [Required]
+        public virtual string UserId { get; set; }
+        [Required]
+        public virtual int DiscussionBoardId { get; set; }
     }
 }

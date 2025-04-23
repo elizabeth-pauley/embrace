@@ -1,58 +1,89 @@
-﻿@model Embrace.Models.DiscussionBoard
+﻿@using Microsoft.AspNetCore.Identity
+@model Embrace.Models.DiscussionBoardDetailViewModel
+@inject SignInManager<User> SignInManager
 
 @{
-    ViewData["Title"] = Model.Title;
+    ViewData["Title"] = Model.DiscussionBoard.Title;
 }
-
+<!--first line below is test code for posting comments using ajax-->
 <link rel="stylesheet" href="/css/discussionBoards.css" />
 
-<div class="title-row">
-    <div class="title-card">
-        <div class="title-card-body">
-            <div class="title-tag">
-                <h2>@Model.Title</h2>
-                <div class="discussion-tag @GetTagClass(@Model.DiscussionType)">@Model.DiscussionType.GetDescription()</div>
-            </div>
-            <div class="title-card-metadata">
-                <div class="title-user">
-                    <div class="title-icon-image">
-                        <img src="/images/userIconLogo.png" alt="User Icon Image" />
-                    </div>
-                    <p>@Model.User.FirstName</p>
+<body>
+    <div class="discussion-board-row">
+        <div class="title-card">
+            <div class="title-card-body">
+                <div class="title-tag">
+                    <h2>@Model.DiscussionBoard.Title</h2>
+                    <div class="discussion-tag @GetTagClass(@Model.DiscussionBoard.DiscussionType)">@Model.DiscussionBoard.DiscussionType.GetDescription()</div>
                 </div>
-                <div class="title-date-posted">
-                    <div class="title-icon-image">
-                        <img src="/images/clockIconLogo.png" alt="Clock Icon Image" />
+                <div class="title-card-metadata">
+                    <div class="title-user">
+                        <div class="title-icon-image">
+                            <img src="/images/userIconLogo.png" alt="User Icon Image" />
+                        </div>
+                        <p>Owner: @Model.DiscussionBoard.User.FirstName</p>
                     </div>
-                    <p>Posted: @Model.CreatedOn.Date.ToShortDateString()</p>
+                    <div class="title-date-posted">
+                        <div class="title-icon-image">
+                            <img src="/images/clockIconLogo.png" alt="Clock Icon Image" />
+                        </div>
+                        <p>Posted: @Model.DiscussionBoard.CreatedOn.Date.ToShortDateString()</p>
+                    </div>
                 </div>
+                <p>@Model.DiscussionBoard.Content</p>
             </div>
-            <p>@Model.Content</p>
         </div>
     </div>
-</div>
+    <div class="discussion-board-row">
+        <div class="comments">
+            <div class="comment-container">
+                @if (Model.Comments.Count != 0)
+                {
+                    <div class="comment-card">
+                        <div class="comment-header">
+                            <p>Comments (@Model.DiscussionBoard.Comments.Count())</p>
+                        </div>
+                    </div>
+                    @foreach (var comment in Model.Comments)
+                    {
+                        <div class="comment-card">
+                            <p>@comment.Content</p>
+                        </div>
+                    }
+                } else
+                {
+                    <p style="font-style: italic">No comments yet.</p>
+                }
 
-<div class="comments">
-    @if (Model.Comments.Count != 0)
-    {
-        @foreach (var comment in Model.Comments)
-        {
-            <div class="comment-card">
-                <p>@comment.Content</p>
-            </div>
-        }
-    } else
-    {
-        <div class="comment-card">
-            <div class="comment-card-body">
-                <p>No comments yet.</p>
+                <div class="comment-card">
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <div class="add-comment-form">
+                            <form asp-action="AddComment" method="post">
+                                <input type="hidden" name="discussionBoardId" value="@Model.DiscussionBoard.Id" />
+                                <div class="form-group">
+                                    <label for="newComment">Add a comment:</label>
+                                    <textarea asp-for="NewCommentContent" class="form-control" rows="3"></textarea>
+                                    <span asp-validation-for="NewCommentContent" class="text-danger"></span>
+                                </div>
+                                <div class="post-comment-button-row">
+                                    <button type="submit" class="btn btn-create">Post Comment</button>
+                                </div>
+                            </form>
+                        </div>
+                    }
+                    else
+                    {
+                        <p style="font-style: italic">Please login to post a comment.</p>
+                    }
+                </div>
             </div>
         </div>
-    }
-</div>
+    </div>
+</body>
 
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.DiscussionBoard.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
 
