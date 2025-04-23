@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0+ezRzKYvWTkDfZmg8+MB+i7rbC0SxqguqdQkn6yi4M=",
+  "Hash": "ZNvE3jsaFKodyLcIp3A9NUm2rDa7XYW02xKZH7IPhTE=",
   "Source": "Embrace",
   "BasePath": "_content/Embrace",
   "Mode": "Default",
@@ -1402,6 +1402,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\resourcePlaceholderImage.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\resourcePlaceholderImage.png",
+      "SourceId": "Embrace",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\",
+      "BasePath": "_content/Embrace",
+      "RelativePath": "images/resourcePlaceholderImage.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\resourcePlaceholderImage.png"
     },
     {
       "Identity": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\resourcesLogo.jpg",

@@ -5,8 +5,7 @@ namespace Embrace.Models
     public class Resource
     {
         public int Id { get; set; }
-        [Display(Name = "Address Id")]
-        public int AddressId { get; set; }
+        public string Address { get; set; } = "";
         [Display(Name = "Resource Type")]
         public required ResourceType ResourceType { get; set; }
         [Display(Name = "Resource Name")]
@@ -17,7 +16,7 @@ namespace Embrace.Models
         public string? LocationImage { get; set; }
         public required string Description { get; set; }
         [Display(Name = "Phone Number")]
-        public int? PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; } = "";
         [Display(Name = "Website Link")]
         public string? WebsiteUrl { get; set; }
         [DataType(DataType.Date)]

@@ -5,6 +5,7 @@
 .resource-image {
     width: 8em;
 }
+
 .resource-image img {
     max-width: 100%;
     max-height: 200px;
@@ -27,4 +28,32 @@
     background-size: 16px 16px;
     background-repeat: no-repeat;
     background-position: left center;
+}
+
+.row {
+    padding-bottom: 1em;
+}
+
+.description-column {
+    text-align: left;
+    width: 60%;
+}
+
+.image-column {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-column img {
+    width: 100%;
+    max-height: 10em;
+    object-fit: contain;
+}
+
+.resource-description {
+    font-style: italic;
+    text-align: left;
+    padding-bottom: 1em;
+    width: 100%;
 }

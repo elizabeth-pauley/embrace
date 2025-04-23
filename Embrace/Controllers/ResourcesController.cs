@@ -79,7 +79,10 @@ namespace Embrace.Controllers
             }
 
             var resource = await _context.Resources
+                .Include(r => r.ServiceCategories)
+                .ThenInclude (rc => rc.ServiceCategory)
                 .FirstOrDefaultAsync(m => m.Id == id);
+                
             if (resource == null)
             {
                 return NotFound();

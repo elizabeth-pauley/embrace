@@ -83,15 +83,6 @@ html {
     color: white;
 }
 
-.btn-download {
-    background-color: #369acc;
-}
-
-.btn-download:hover {
-    background-color: #2a7ba8;
-    color: white;
-}
-
 .btn-delete {
     background-color: #de324c;
 }

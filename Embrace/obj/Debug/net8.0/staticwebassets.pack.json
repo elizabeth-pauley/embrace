@@ -57,6 +57,10 @@
       "PackagePath": "staticwebassets\\images\\resourcePlaceholderImage.jpg"
     },
     {
+      "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\resourcePlaceholderImage.png",
+      "PackagePath": "staticwebassets\\images\\resourcePlaceholderImage.png"
+    },
+    {
       "Id": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\images\\resourcesLogo.jpg",
       "PackagePath": "staticwebassets\\images\\resourcesLogo.jpg"
     },
