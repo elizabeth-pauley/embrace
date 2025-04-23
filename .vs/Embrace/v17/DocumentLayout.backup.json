@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "Embrace\\Views\\DiscussionBoards\\Details.cshtml",
               "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\DiscussionBoards\\Details.cshtml",
               "RelativeToolTip": "Embrace\\Views\\DiscussionBoards\\Details.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-23T03:30:46.112Z",
               "EditorCaption": ""
@@ -53,7 +53,7 @@
               "RelativeDocumentMoniker": "Embrace\\wwwroot\\css\\discussionBoards.css",
               "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\wwwroot\\css\\discussionBoards.css",
               "RelativeToolTip": "Embrace\\wwwroot\\css\\discussionBoards.css",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAD4AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-04-23T03:39:59.826Z",
               "EditorCaption": ""
@@ -79,7 +79,7 @@
               "RelativeDocumentMoniker": "Embrace\\Views\\Resources\\Index.cshtml",
               "ToolTip": "C:\\Users\\EP\\OneDrive\\MontanaStateUniversity\\Spring2025\\CSCI483\\embrace\\Embrace\\Views\\Resources\\Index.cshtml",
               "RelativeToolTip": "Embrace\\Views\\Resources\\Index.cshtml",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-23T15:22:23.85Z",
               "EditorCaption": ""
@@ -94,8 +94,7 @@
               "RelativeToolTip": "Embrace\\wwwroot\\css\\resources.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-04-23T01:48:44.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T01:48:44.891Z"
             }
           ]
         }

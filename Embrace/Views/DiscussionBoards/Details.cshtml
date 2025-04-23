@@ -15,17 +15,40 @@
             </div>
             <div class="title-card-metadata">
                 <div class="title-user">
-                    <img class="user-icon" src="/images/userIconLogo.png" alt="User Icon Image" />
+                    <div class="title-icon-image">
+                        <img src="/images/userIconLogo.png" alt="User Icon Image" />
+                    </div>
                     <p>@Model.User.FirstName</p>
                 </div>
                 <div class="title-date-posted">
-                    <img class="user-icon" src="/images/clockIconLogo.png" alt="Clock Icon Image" />
+                    <div class="title-icon-image">
+                        <img src="/images/clockIconLogo.png" alt="Clock Icon Image" />
+                    </div>
                     <p>Posted: @Model.CreatedOn.Date.ToShortDateString()</p>
                 </div>
             </div>
             <p>@Model.Content</p>
         </div>
     </div>
+</div>
+
+<div class="comments">
+    @if (Model.Comments.Count != 0)
+    {
+        @foreach (var comment in Model.Comments)
+        {
+            <div class="comment-card">
+                <p>@comment.Content</p>
+            </div>
+        }
+    } else
+    {
+        <div class="comment-card">
+            <div class="comment-card-body">
+                <p>No comments yet.</p>
+            </div>
+        </div>
+    }
 </div>
 
 <div>
