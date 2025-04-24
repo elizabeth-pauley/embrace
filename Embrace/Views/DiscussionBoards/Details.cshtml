@@ -43,19 +43,43 @@
     <div class="discussion-board-row">
         <div class="comments">
             <div class="comment-container">
-                @if (Model.Comments.Count != 0)
+                @if (Model.Comments!.Count != 0)
                 {
                     <div class="comment-card">
                         <div class="comment-header">
                             <p>Comments (@Model.DiscussionBoard.Comments.Count())</p>
                         </div>
                     </div>
+
                     @foreach (var comment in Model.Comments)
                     {
                         <div class="comment-card">
-                            <p>@comment.Content</p>
+                            <div class="comment-title">
+                                <div class="comment-title-user">
+                                    <div class="title-icon-image">
+                                        <img src="/images/userIconLogo.png" alt="User Icon Image" />
+                                    </div>
+                                    @if (SignInManager.IsSignedIn(User) && (comment.User?.Id == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value))
+                                    {
+                                        <p>Me</p>
+                                    }
+                                    else
+                                    {
+                                        <p>@comment.User!.FirstName</p>
+                                    }
+                                </div>
+                                <div class="comment-title-date-posted">
+                                    <div class="title-date-posted">
+                                        <div class="title-icon-image">
+                                            <img src="/images/clockIconLogo.png" alt="Clock Icon Image" />
+                                        </div>
+                                        <p>@comment.CreatedOn.Date.ToShortDateString()</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="comment-content">@comment.Content</p>
                         </div>
-                    }
+                     }
                 } else
                 {
                     <p style="font-style: italic">No comments yet.</p>
@@ -89,8 +113,11 @@
 </body>
 
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.DiscussionBoard.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+    {
+        <a asp-action="Edit" asp-route-id="@Model?.DiscussionBoard.Id">Edit</a>
+    }
+    <a asp-action="Index">Return</a>
 </div>
 
 @functions {

@@ -70,6 +70,10 @@
     font-size: .8em;
 }
 
+.comment-content {
+    padding-top: 1em;
+}
+
 .title-card-body {
     padding: 0.5rem 1rem;
 }
@@ -90,19 +94,31 @@
     font-style: italic;
 }
 
-.title-user, .title-date-posted {
+.title-user, .title-date-posted, .comment-title {
     display: flex;
     align-items: center;
+    font-style: italic;
 }
 
-.title-user p, .title-date-posted p {
+.comment-title-user {
+    display: flex;
+    width: fit-content;
+    padding-right: 1em;
+}
+.title-user p, .title-date-posted p, .comment-title p {
     margin: 0px;
+}
+
+.title-icon-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .title-icon-image img {
     max-width: 1.2em;
     max-height: 1.2em;
-    margin-right: .5em;
+    margin-right: .3em;
 }
 
 .card {
@@ -232,7 +248,7 @@
     text-align: left;
 }
 
-.card-body p {
+.card-body p, .add-comment-form, .form-control {
     max-height: calc(8rem * var(--base));
     overflow: hidden; /* truncate text so that it stays within the body area */
     position: relative;
