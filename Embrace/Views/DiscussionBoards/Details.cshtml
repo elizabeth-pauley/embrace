@@ -3,9 +3,8 @@
 @inject SignInManager<User> SignInManager
 
 @{
-    ViewData["Title"] = Model.DiscussionBoard.Title;
+    ViewData["Title"] = @Model.DiscussionBoard.Title;
 }
-<!--first line below is test code for posting comments using ajax-->
 <link rel="stylesheet" href="/css/discussionBoards.css" />
 
 <body>
@@ -73,7 +72,7 @@
                                         <div class="title-icon-image">
                                             <img src="/images/clockIconLogo.png" alt="Clock Icon Image" />
                                         </div>
-                                        <p>@comment.CreatedOn.Date.ToShortDateString()</p>
+                                        <p>@comment.CreatedOn</p>
                                     </div>
                                 </div>
                             </div>

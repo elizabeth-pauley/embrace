@@ -255,6 +255,10 @@
     font-size: .9em;
 }
 
+.form-control {
+    width: 99%;
+}
+
 .card-body p.fade-if-overflow:after {
     content: "";
     background: linear-gradient(to right, transparent, var(--background) 80%);

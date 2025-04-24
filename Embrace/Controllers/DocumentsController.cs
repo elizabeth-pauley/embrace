@@ -54,7 +54,9 @@ namespace Embrace.Controllers
         // GET: Documents
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Documents.Include(d => d.User);
+            var userId = _userManager.GetUserId(User);
+            var applicationDbContext = _context.Documents.Include(d => d.User)
+                                .Where(x => x.UserId == userId);
             var documents = await applicationDbContext.AsQueryable().ToListAsync();
 
             var documentVM = new DocumentViewModel

@@ -25,7 +25,10 @@ namespace Embrace.Controllers
         // GET: DiscussionBoards
         public async Task<IActionResult> Index(DiscussionType? discussionType, string? searchString)
         {
-            var discussionBoardQuery = _context.DiscussionBoards.Include(d => d.User).AsQueryable();
+            var discussionBoardQuery = _context.DiscussionBoards
+                .Include(d => d.User)
+                .Include(d => d.Comments)
+                .AsQueryable();
 
             // Filter by search term
             if (!string.IsNullOrEmpty(searchString))
@@ -66,8 +69,9 @@ namespace Embrace.Controllers
             }
 
             var discussionBoard = await _context.DiscussionBoards
+                .Include(d => d.User)
                 .Include(c => c.Comments)
-                .Include(u => u.User)
+                    .ThenInclude(u => u.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
             if (discussionBoard == null)
@@ -78,7 +82,7 @@ namespace Embrace.Controllers
             var discussionBoardDetailViewModel = new DiscussionBoardDetailViewModel
             {
                 DiscussionBoard = discussionBoard,
-                Comments = discussionBoard.Comments.OrderByDescending(c => c.CreatedOn).ToList()
+                Comments = discussionBoard.Comments.OrderBy(c => c.CreatedOn).ToList()
             };
 
             return View(discussionBoardDetailViewModel);
@@ -101,6 +105,9 @@ namespace Embrace.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Title,Content,DiscussionType")] CreateDiscussionBoardViewModel vm)
         {
+            var userId = _userManager.GetUserId(User);
+            var user = await _context.Users.FindAsync(userId);
+
             if (ModelState.IsValid)
             {
                 var discussionBoard = new DiscussionBoard
@@ -108,7 +115,8 @@ namespace Embrace.Controllers
                     Title = vm.Title,
                     Content = vm.Content,
                     DiscussionType = vm.DiscussionType,
-                    UserId = _userManager.GetUserId(User)!,
+                    UserId = userId,
+                    User = user,
                     CreatedOn = DateTime.Now
                 };
 
@@ -120,7 +128,6 @@ namespace Embrace.Controllers
             vm.DiscussionTypes = new SelectList(Enum.GetValues(typeof(DiscussionType)).Cast<DiscussionType>());
 
             // Optionally repopulate any other dropdowns you might have.
-            var userId = _userManager.GetUserId(User);
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", userId);
 
             return View(vm);
@@ -219,6 +226,9 @@ namespace Embrace.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddComment(CreateCommentViewModel model)
         {
+            var userId = _userManager.GetUserId(User);
+            var user = await _context.Users.FindAsync(userId);
+
             if (ModelState.IsValid)
             {
                 var comment = new Comment
@@ -226,7 +236,8 @@ namespace Embrace.Controllers
                     Content = model.NewCommentContent,
                     CreatedOn = DateTime.Now,
                     DiscussionBoardId = model.DiscussionBoardId,
-                    UserId = _userManager.GetUserId(User)
+                    UserId = userId,
+                    User = user
                 };
 
                 _context.Comments.Add(comment);
@@ -239,13 +250,13 @@ namespace Embrace.Controllers
             var board = await _context.DiscussionBoards
                 .Include(d => d.User)
                 .Include(d => d.Comments)
-                .ThenInclude(c => c.User)
+                    .ThenInclude(c => c.User)
                 .FirstOrDefaultAsync(d => d.Id == model.DiscussionBoardId);
 
             var viewModel = new DiscussionBoardDetailViewModel
             {
                 DiscussionBoard = board,
-                Comments = board.Comments.OrderByDescending(c => c.CreatedOn).ToList(),
+                Comments = board.Comments.OrderBy(c => c.CreatedOn).ToList(),
                 NewCommentContent = model.NewCommentContent
             };
 
