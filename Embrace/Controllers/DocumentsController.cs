@@ -263,7 +263,7 @@ namespace Embrace.Controllers
             }
 
             var document = await _context.Documents
-                .Include(d => d.UserId)
+                .Include(d => d.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (document == null)
             {

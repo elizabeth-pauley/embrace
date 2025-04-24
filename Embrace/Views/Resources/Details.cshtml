@@ -3,7 +3,7 @@
 @inject SignInManager<User> SignInManager
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = Model.ResourceName + " Details";
 }
 
 <link rel="stylesheet" href="/css/resources.css" />
@@ -110,8 +110,11 @@
             <p>Phone number is not currently available for @Model.ResourceName. Consider visiting the organization website to learn more.</p>
         }
     </dd>
-    </dl>
+</dl>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+    {
+        <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+    }
+    <a asp-action="Index">Return</a>
 </div>

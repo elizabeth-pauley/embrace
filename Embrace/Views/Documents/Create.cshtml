@@ -4,6 +4,8 @@
     ViewData["Title"] = "Translate Document";
 }
 
+<link rel="stylesheet" href="/css/documents.css" />
+
 <h1>Upload a Document to be Translated</h1>
 
 <div class="row create-page">
@@ -20,6 +22,8 @@
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
+            <p class="lang-selection-title">Select the current language and your desired language for translation.</p>
+            <p>Some common languages are listed in the table below (use the abbreviation). Visit <a href="https://cloud.google.com/translate/docs/languages">this website</a> to see the full list of languages available.</p>
             <div class="form-group">
                 <label asp-for="OriginalLanguage" class="control-label">Current Language</label>
                 <input asp-for="OriginalLanguage" class="form-control" />
@@ -31,14 +35,116 @@
                 <span asp-validation-for="TargetLanguage" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Translate" class="btn btn-primary" />
+                <input type="submit" value="Translate" class="btn btn-primary translate-btn" />
             </div>
+            <table class="table table-sm">
+                <thead>
+                    <tr class="language-row">
+                        <th>
+                            <p style="color:black; font-weight: bold">Language</p>
+                        </th>
+                        <th>
+                            <p style="color: black; font-weight: bold">Abbreviation</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="language-row">
+                        <td>
+                            English
+                        </td>
+                        <td>
+                            en
+                        </td>
+                    </tr>
+                    <tr class="language-row">
+                        <td>
+                            Chinese (Simplified)
+                        </td>
+                        <td>
+                            zh-CN
+                        </td>
+                    </tr>
+                    <tr class="language-row">
+                        <td>
+                            Chinese (Traditional)
+                        </td>
+                        <td>
+                            zh-TW
+                        </td>
+                    </tr>
+                    <tr class="language-row">
+                        <td>
+                            Cantonese
+                        </td>
+                        <td>
+                            yue
+                        </td>
+                    </tr>
+                    <tr class="language-row">
+                        <td>
+                            Filipino (Tagalog)
+                        </td>
+                        <td>
+                            fil
+                        </td>
+                    </tr>
+                    <tr class="language-row">
+                        <td>
+                            Arabic
+                        </td>
+                        <td>
+                            ar
+                        </td>
+                    </tr>
+                    <tr class="language-row">
+                        <td>
+                            French
+                        </td>
+                        <td>
+                            fr
+                        </td>
+                    </tr>
+                    <tr class="language-row">
+                        <td>
+                            Korean
+                        </td>
+                        <td>
+                            ko
+                        </td>
+                    </tr>
+                    <tr class="language-row">
+                        <td>
+                            Portuguese
+                        </td>
+                        <td>
+                            pt
+                        </td>
+                    </tr>
+                    <tr class="language-row">
+                        <td>
+                            Russian
+                        </td>
+                        <td>
+                            ru
+                        </td>
+                    </tr>
+                    <tr class="language-row">
+                        <td>
+                            Haitian Creole
+                        </td>
+                        <td>
+                            ht
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Return</a>
 </div>
 
 @section Scripts {

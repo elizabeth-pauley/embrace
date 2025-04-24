@@ -28,7 +28,7 @@ namespace Embrace.Controllers
 
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
-        {
+        { 
             if (ModelState.IsValid)
             {
                 // Copy data from RegisterViewModel to IdentityUser
@@ -46,7 +46,7 @@ namespace Embrace.Controllers
                 if (result.Succeeded)
                 {
                     await signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("index", "home");
+                    return RedirectToAction("Index", "home");
                 }
                 // If there are any errors, add them to the ModelState object
                 // which will be displayed by the validation summary tag helper

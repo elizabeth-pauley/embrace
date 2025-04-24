@@ -59,10 +59,15 @@
 .comment-header {
     background-color: #f8f9fa;
     justify-content: left;
+    font-weight: bold;
 }
 
 .comment-card-body {
     padding: 0.5rem 1rem;
+}
+
+.comment-card p {
+    font-size: .8em;
 }
 
 .title-card-body {
@@ -166,6 +171,7 @@
 
 .post-comment-button-row {
     text-align: right;
+    margin-top: .4em;
 }
 
 .discussion-tag {

@@ -21,3 +21,17 @@
 .doc-upload-description {
     padding-bottom: 1em;
 }
+
+.language-row th, .language-row td {
+    padding: 0px 0px 0px 0px;
+}
+
+.lang-selection-title {
+    font-weight: bold;
+    padding: 1em 0em 0em 0em;
+    margin: 0px;
+}
+
+.translate-btn {
+    margin-top: .4em;
+}

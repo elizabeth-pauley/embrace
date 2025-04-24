@@ -21,7 +21,13 @@
                         <div class="title-icon-image">
                             <img src="/images/userIconLogo.png" alt="User Icon Image" />
                         </div>
-                        <p>Owner: @Model.DiscussionBoard.User.FirstName</p>
+                        @if (SignInManager.IsSignedIn(User) && (Model.DiscussionBoard.User?.Id == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value))
+                        {
+                            <p>Owner: Me</p>
+                        } else
+                        {
+                            <p>Owner: @Model.DiscussionBoard.User.FirstName</p>
+                        }
                     </div>
                     <div class="title-date-posted">
                         <div class="title-icon-image">
